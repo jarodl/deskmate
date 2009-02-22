@@ -1,0 +1,10 @@
+<h1>Add a new guest to resident:</h1>
+<%= error_messages_for :guest %>
+<% form_tag :action => 'create' do %>
+	<p><label for="guest_name">Guest Name</label>:
+		<%= text_field 'guest', 'name' %></p>
+	<p><label for="guest_has_form">Has Form</label>:
+		<%= select( "guest", "has_form", { "Yes" => "true", "No" => "false"}) %></p>
+	<%= submit_tag "Create" %>
+<% end %>
+<%= link_to 'Back', {:action => 'list'} %>

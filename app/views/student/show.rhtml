@@ -1,0 +1,13 @@
+<h3>Student:</h3>
+<% if @student.nil? %>
+	<p>This student does not exist.</p>
+<% else %>
+	<table>
+	<th><%= @student.name %></th>
+	<tr><td>Phone:</td><td><%= @student.phone %></td></tr>
+	<tr><td>Room:</td><td><%= @student.room %></td></tr>
+	<tr><td>ID:</td><td><%= @student.studentid %></td></tr>
+	</table>
+<% end %>
+<p><%= link_to "Edit", {:action => 'edit', :id => @student.id} %></p>
+<p><%= link_to "View All", {:action => 'list'} %></p>

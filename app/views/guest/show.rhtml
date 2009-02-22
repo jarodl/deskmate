@@ -1,0 +1,11 @@
+<h3>Guest:</h3>
+<% if @guest.nil? %>
+	<p>This guest does not exist.</p>
+<% else %>
+	<table>
+	<th><%= @guest.name %></th>
+	<tr><td>Has form:</td><td><%= @guest.has_form %></td></tr>
+	</table>
+<% end %>
+<p><%= link_to "Edit", {:action => 'edit', :id => @guest.id} %></p>
+<p><%= link_to "View All", {:action => 'list'} %></p>

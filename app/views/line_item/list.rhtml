@@ -1,0 +1,14 @@
+<% if @line_items.blank? %>
+	<p>There are not any items currently in the system.</p>
+<% else %>
+	<p>These are the current items in our system:</p>
+	<ul id="line_items">
+		<% @line_items.each do |c| %>
+			<ul id="inner_items">
+				<li><%= link_to c.student.name, {:action => 'show', :id => c.student.id} %></li>
+				<li><%= link_to c.guest.name, {:action => 'show', :id => c.guest.id} -%></li>
+			</ul>
+		<% end %>
+	</ul>
+<% end %>
+<p><%= link_to "Add new line_item", {:action => 'new'} %></p>
