@@ -17039,3 +17039,1899 @@ Processing GuestController#show (for 127.0.0.1 at 2009-02-21 23:12:58) [GET]
   [4;36;1mGuest Load (0.000776)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
 Rendering guest/show
 Completed in 0.01063 (94 reqs/sec) | Rendering: 0.00216 (20%) | DB: 0.00399 (37%) | 200 OK [http://127.0.0.1/guest/show/3]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-21 23:22:35) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.002737)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000583)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
+Rendering guest/show
+Completed in 0.01025 (97 reqs/sec) | Rendering: 0.00195 (18%) | DB: 0.00332 (32%) | 200 OK [http://127.0.0.1/guest/show/3]
+
+
+Processing GuestController#update (for 127.0.0.1 at 2009-02-21 23:26:03) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Save Changes", "action"=>"update", "id"=>"3", "guest"=>{"name"=>"John Doesuph", "has_form"=>"false"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003654)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000715)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
+  [4;35;1mSQL (0.001462)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.004991)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = 'John Doesuph' AND guests.id <> 3) LIMIT 1[0m
+  [4;35;1mGuest Update (0.000351)[0m   [0mUPDATE guests SET `has_form` = 0, `parent_id` = NULL, `name` = 'John Doesuph' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.001108)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/guest/show/3
+Completed in 0.07878 (12 reqs/sec) | DB: 0.01228 (15%) | 302 Found [http://127.0.0.1/guest/update/3]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-21 23:26:03) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003375)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000855)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
+Rendering guest/show
+Completed in 0.01225 (81 reqs/sec) | Rendering: 0.00285 (23%) | DB: 0.00423 (34%) | 200 OK [http://127.0.0.1/guest/show/3]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-21 23:26:05) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000581)[0m   [0mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;36;1mGuest Columns (0.002517)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.01149 (87 reqs/sec) | Rendering: 0.00364 (31%) | DB: 0.00310 (26%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#edit (for 127.0.0.1 at 2009-02-21 23:26:33) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003347)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000690)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
+Rendering guest/edit
+Completed in 0.01596 (62 reqs/sec) | Rendering: 0.00701 (43%) | DB: 0.00404 (25%) | 200 OK [http://127.0.0.1/guest/edit/3]
+
+
+Processing GuestController#update (for 127.0.0.1 at 2009-02-21 23:26:36) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Save Changes", "action"=>"update", "id"=>"3", "guest"=>{"name"=>"John Doesuph", "has_form"=>"true"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003372)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000749)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
+  [4;35;1mSQL (0.000744)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.000938)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = 'John Doesuph' AND guests.id <> 3) LIMIT 1[0m
+  [4;35;1mGuest Update (0.000313)[0m   [0mUPDATE guests SET `has_form` = 1, `parent_id` = NULL, `name` = 'John Doesuph' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.020252)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/guest/show/3
+Completed in 0.03540 (28 reqs/sec) | DB: 0.02637 (74%) | 302 Found [http://127.0.0.1/guest/update/3]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-21 23:26:36) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.002085)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.001006)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
+Rendering guest/show
+Completed in 0.00908 (110 reqs/sec) | Rendering: 0.00163 (17%) | DB: 0.00309 (34%) | 200 OK [http://127.0.0.1/guest/show/3]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-21 23:35:52) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000600)[0m   [0mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;36;1mGuest Columns (0.003724)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.01281 (78 reqs/sec) | Rendering: 0.00393 (30%) | DB: 0.00432 (33%) | 200 OK [http://127.0.0.1/guest/list]
+  [4;36;1mSQL (0.000163)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.015142)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000580)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000351)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateLineItems (5)
+  [4;36;1mSQL (0.016526)[0m   [0;1mDROP TABLE line_items[0m
+  [4;35;1mSQL (0.000431)[0m   [0mUPDATE schema_info SET version = 4[0m
+Reached target version: 4
+  [4;36;1mSQL (0.010434)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.040154)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.003067)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mSQL (0.001305)[0m   [0mSHOW KEYS FROM guests[0m
+  [4;36;1mSQL (0.003065)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mSQL (0.001084)[0m   [0mSHOW KEYS FROM students[0m
+  [4;36;1mSQL (0.000191)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000326)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000181)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000205)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateLineItems (5)
+  [4;36;1mSQL (0.100777)[0m   [0;1mCREATE TABLE line_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `student_id` int(11) NOT NULL, `guest_id` int(11) NOT NULL, `signed_in_at` datetime DEFAULT NULL, `signed_out_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.170528)[0m   [0malter table line_items add constraint fk_line_item_students
+ foreign key (student_id) references students(id)[0m
+  [4;36;1mSQL (0.107763)[0m   [0;1malter table line_items add constraint fk_line_item_guests
+ foreign key (guest_id) references guests(id)[0m
+  [4;35;1mSQL (0.000404)[0m   [0mUPDATE schema_info SET version = 5[0m
+  [4;36;1mSQL (0.000256)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddGuestColumns (6)
+  [4;36;1mSQL (0.000178)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000325)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000209)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000197)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000238)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000241)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddGuestColumns (6)
+  [4;36;1mSQL (0.000190)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000318)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000172)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000207)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000173)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000171)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddGuestColumns (6)
+  [4;36;1mSQL (0.000125)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000365)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000188)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000201)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000169)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddGuestColumns (6)
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Table 'manager_development.guest' doesn't exist: ALTER TABLE guest ADD `student_id` int(11)[0m
+  [4;36;1mSQL (0.000516)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000322)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000172)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000296)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000180)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateLineItems (5)
+  [4;36;1mSQL (0.018944)[0m   [0;1mDROP TABLE line_items[0m
+  [4;35;1mSQL (0.000412)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000336)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to RemoveTime (4)
+  [4;36;1mSQL (0.000125)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000231)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000189)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000285)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000177)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to RemoveTime (4)
+  [4;36;1mSQL (0.000125)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000322)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000171)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000401)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateLineItems (5)
+  [4;36;1mSQL (0.133962)[0m   [0;1mCREATE TABLE line_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `student_id` int(11) NOT NULL, `guest_id` int(11) NOT NULL, `signed_in_at` datetime DEFAULT NULL, `signed_out_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.159045)[0m   [0malter table line_items add constraint fk_line_item_students
+ foreign key (student_id) references students(id)[0m
+  [4;36;1mSQL (0.107477)[0m   [0;1malter table line_items add constraint fk_line_item_guests
+ foreign key (guest_id) references guests(id)[0m
+  [4;35;1mSQL (0.000509)[0m   [0mUPDATE schema_info SET version = 5[0m
+  [4;36;1mSQL (0.000560)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddGuestColumns (6)
+  [4;35;1mSQL (0.109902)[0m   [0mALTER TABLE guests ADD `student_id` int(11) NOT NULL[0m
+  [4;36;1mSQL (0.139555)[0m   [0;1mALTER TABLE guests ADD `signed_in_at` datetime[0m
+  [4;35;1mSQL (0.122388)[0m   [0mALTER TABLE guests ADD `signed_out_at` datetime[0m
+  [4;36;1mSQL (0.000451)[0m   [0;1mUPDATE schema_info SET version = 6[0m
+  [4;35;1mSQL (0.000251)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to RemoveLineItems (7)
+  [4;36;1mSQL (0.002523)[0m   [0;1mDROP TABLE line_items[0m
+  [4;35;1mSQL (0.000462)[0m   [0mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000283)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000706)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002407)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mSQL (0.000881)[0m   [0mSHOW KEYS FROM guests[0m
+  [4;36;1mSQL (0.002215)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mSQL (0.000795)[0m   [0mSHOW KEYS FROM students[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000248)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000195)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000325)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to RemoveLineItems (7)
+  [4;36;1mSQL (0.142306)[0m   [0;1mCREATE TABLE line_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `student_id` int(11) NOT NULL, `guest_id` int(11) NOT NULL, `signed_in_at` datetime DEFAULT NULL, `signed_out_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.411200)[0m   [0malter table line_items add constraint fk_line_item_students
+ foreign key (student_id) references students(id)[0m
+  [4;36;1mSQL (0.199253)[0m   [0;1malter table line_items add constraint fk_line_item_guests
+ foreign key (guest_id) references guests(id)[0m
+  [4;35;1mSQL (0.000365)[0m   [0mUPDATE schema_info SET version = 6[0m
+  [4;36;1mSQL (0.000301)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddGuestColumns (6)
+  [4;36;1mSQL (0.000132)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000258)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000196)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000333)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddGuestColumns (6)
+  [4;35;1mSQL (0.123406)[0m   [0mALTER TABLE guests DROP `student_id`[0m
+  [4;36;1mSQL (0.151248)[0m   [0;1mALTER TABLE guests DROP `signed_in_at`[0m
+  [4;35;1mSQL (0.098909)[0m   [0mALTER TABLE guests DROP `signed_out_at`[0m
+  [4;36;1mSQL (0.000504)[0m   [0;1mUPDATE schema_info SET version = 5[0m
+  [4;35;1mSQL (0.000272)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateLineItems (5)
+  [4;36;1mSQL (0.001557)[0m   [0;1mDROP TABLE line_items[0m
+  [4;35;1mSQL (0.000342)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000234)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to RemoveTime (4)
+  [4;36;1mSQL (0.000127)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000366)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000179)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000174)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateLineItems (5)
+  [4;36;1mSQL (0.115257)[0m   [0;1mCREATE TABLE line_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `student_id` int(11) NOT NULL, `guest_id` int(11) NOT NULL, `signed_in_at` datetime DEFAULT NULL, `signed_out_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.156096)[0m   [0malter table line_items add constraint fk_line_item_students
+ foreign key (student_id) references students(id)[0m
+  [4;36;1mSQL (0.111438)[0m   [0;1malter table line_items add constraint fk_line_item_guests
+ foreign key (guest_id) references guests(id)[0m
+  [4;35;1mSQL (0.001439)[0m   [0mUPDATE schema_info SET version = 5[0m
+  [4;36;1mSQL (0.000373)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddGuestColumns (6)
+  [4;35;1mSQL (0.107462)[0m   [0mALTER TABLE guests ADD `student_id` int(11) NOT NULL[0m
+  [4;36;1mSQL (0.113791)[0m   [0;1mALTER TABLE guests ADD `signed_in_at` datetime[0m
+  [4;35;1mSQL (0.117478)[0m   [0mALTER TABLE guests ADD `signed_out_at` datetime[0m
+  [4;36;1mSQL (0.000351)[0m   [0;1mUPDATE schema_info SET version = 6[0m
+  [4;35;1mSQL (0.000396)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to RemoveLineItems (7)
+  [4;36;1mSQL (0.002291)[0m   [0;1mDROP TABLE line_items[0m
+  [4;35;1mSQL (0.000316)[0m   [0mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000454)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002075)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mSQL (0.000821)[0m   [0mSHOW KEYS FROM guests[0m
+  [4;36;1mSQL (0.001770)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mSQL (0.000729)[0m   [0mSHOW KEYS FROM students[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000286)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000185)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000372)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to RemoveLineItems (7)
+  [4;36;1mSQL (0.057748)[0m   [0;1mCREATE TABLE line_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `student_id` int(11) NOT NULL, `guest_id` int(11) NOT NULL, `signed_in_at` datetime DEFAULT NULL, `signed_out_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.118304)[0m   [0malter table line_items add constraint fk_line_item_students
+ foreign key (student_id) references students(id)[0m
+  [4;36;1mSQL (0.150828)[0m   [0;1malter table line_items add constraint fk_line_item_guests
+ foreign key (guest_id) references guests(id)[0m
+  [4;35;1mSQL (0.000320)[0m   [0mUPDATE schema_info SET version = 6[0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddGuestColumns (6)
+  [4;35;1mSQL (0.110565)[0m   [0mALTER TABLE guests DROP `student_id`[0m
+  [4;36;1mSQL (0.122008)[0m   [0;1mALTER TABLE guests DROP `signed_in_at`[0m
+  [4;35;1mSQL (0.109376)[0m   [0mALTER TABLE guests DROP `signed_out_at`[0m
+  [4;36;1mSQL (0.000405)[0m   [0;1mUPDATE schema_info SET version = 5[0m
+  [4;35;1mSQL (0.000223)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateLineItems (5)
+  [4;36;1mSQL (0.023504)[0m   [0;1mDROP TABLE line_items[0m
+  [4;35;1mSQL (0.000368)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000376)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to RemoveTime (4)
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000268)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000212)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000304)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000173)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000199)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to RemoveTime (4)
+  [4;36;1mSQL (0.000124)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000342)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000181)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateLineItems (5)
+  [4;36;1mSQL (0.131866)[0m   [0;1mCREATE TABLE line_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `student_id` int(11) NOT NULL, `guest_id` int(11) NOT NULL, `signed_in_at` datetime DEFAULT NULL, `signed_out_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.104388)[0m   [0malter table line_items add constraint fk_line_item_students
+ foreign key (student_id) references students(id)[0m
+  [4;36;1mSQL (0.125588)[0m   [0;1malter table line_items add constraint fk_line_item_guests
+ foreign key (guest_id) references guests(id)[0m
+  [4;35;1mSQL (0.001472)[0m   [0mUPDATE schema_info SET version = 5[0m
+  [4;36;1mSQL (0.000400)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddGuestColumns (6)
+  [4;35;1mSQL (0.105372)[0m   [0mALTER TABLE guests ADD `student_id` int(11) NOT NULL[0m
+  [4;36;1mSQL (0.109909)[0m   [0;1mALTER TABLE guests ADD `signed_in_at` datetime[0m
+  [4;35;1mSQL (0.123271)[0m   [0mALTER TABLE guests ADD `signed_out_at` datetime[0m
+  [4;36;1mSQL (0.001316)[0m   [0;1mUPDATE schema_info SET version = 6[0m
+  [4;35;1mSQL (0.000512)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to RemoveLineItems (7)
+  [4;36;1mSQL (0.001974)[0m   [0;1mDROP TABLE line_items[0m
+  [4;35;1mSQL (0.000402)[0m   [0mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000264)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000507)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002164)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mSQL (0.000822)[0m   [0mSHOW KEYS FROM guests[0m
+  [4;36;1mSQL (0.001730)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mSQL (0.001534)[0m   [0mSHOW KEYS FROM students[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000334)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000210)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000801)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000207)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000338)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000194)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to RemoveStudentId (8)
+  [4;35;1mSQL (0.160959)[0m   [0mALTER TABLE guests DROP `student_id`[0m
+  [4;36;1mSQL (0.000361)[0m   [0;1mUPDATE schema_info SET version = 8[0m
+  [4;35;1mSQL (0.000244)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000463)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002255)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mSQL (0.000762)[0m   [0;1mSHOW KEYS FROM guests[0m
+  [4;35;1mSQL (0.002008)[0m   [0mSHOW FIELDS FROM students[0m
+  [4;36;1mSQL (0.000799)[0m   [0;1mSHOW KEYS FROM students[0m
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:07:04) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000680)[0m   [0mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;36;1mGuest Columns (0.006816)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.01560 (64 reqs/sec) | Rendering: 0.00334 (21%) | DB: 0.00750 (48%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:07:07) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003954)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000746)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 1) [0m
+Rendering guest/show
+Completed in 0.01217 (82 reqs/sec) | Rendering: 0.00287 (23%) | DB: 0.00470 (38%) | 200 OK [http://127.0.0.1/guest/show/1]
+
+
+Processing GuestController#edit (for 127.0.0.1 at 2009-02-22 00:07:11) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003804)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000952)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
+Rendering guest/edit
+Completed in 0.01714 (58 reqs/sec) | Rendering: 0.00701 (40%) | DB: 0.00476 (27%) | 200 OK [http://127.0.0.1/guest/edit/3]
+
+
+Processing GuestController#update (for 127.0.0.1 at 2009-02-22 00:07:12) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Save Changes", "action"=>"update", "id"=>"3", "guest"=>{"name"=>"John Doesuph", "has_form"=>"false"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003537)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.001342)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
+  [4;35;1mSQL (0.000124)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.000590)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = 'John Doesuph' AND guests.id <> 3) LIMIT 1[0m
+  [4;35;1mGuest Update (0.000316)[0m   [0mUPDATE guests SET `signed_out_at` = NULL, `signed_in_at` = NULL, `has_form` = 0, `parent_id` = NULL, `name` = 'John Doesuph' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.000823)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/guest/show/3
+Completed in 0.01732 (57 reqs/sec) | DB: 0.00673 (38%) | 302 Found [http://127.0.0.1/guest/update/3]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:07:12) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.002399)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.001032)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
+Rendering guest/show
+Completed in 0.01028 (97 reqs/sec) | Rendering: 0.00178 (17%) | DB: 0.00343 (33%) | 200 OK [http://127.0.0.1/guest/show/3]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:07:14) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000666)[0m   [0mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;36;1mGuest Columns (0.004099)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.01358 (73 reqs/sec) | Rendering: 0.00457 (33%) | DB: 0.00476 (35%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:10:54) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000662)[0m   [0mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;36;1mGuest Columns (0.004951)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.01385 (72 reqs/sec) | Rendering: 0.00366 (26%) | DB: 0.00561 (40%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:13:16) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.004603)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000780)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 1) [0m
+Rendering guest/show
+Completed in 0.01481 (67 reqs/sec) | Rendering: 0.00471 (31%) | DB: 0.00538 (36%) | 200 OK [http://127.0.0.1/guest/show/1]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:13:17) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000656)[0m   [0mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;36;1mGuest Columns (0.002913)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.00974 (102 reqs/sec) | Rendering: 0.00303 (31%) | DB: 0.00357 (36%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:14:24) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.004012)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.001340)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 1) [0m
+Rendering guest/show
+Completed in 0.01286 (77 reqs/sec) | Rendering: 0.00362 (28%) | DB: 0.00535 (41%) | 200 OK [http://127.0.0.1/guest/show/1]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:14:26) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000652)[0m   [0mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;36;1mGuest Columns (0.003630)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.01061 (94 reqs/sec) | Rendering: 0.00302 (28%) | DB: 0.00428 (40%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:17:30) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003760)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000886)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 1) [0m
+Rendering guest/show
+Completed in 0.01240 (80 reqs/sec) | Rendering: 0.00385 (31%) | DB: 0.00465 (37%) | 200 OK [http://127.0.0.1/guest/show/1]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:17:33) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.002587)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000529)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 2) [0m
+Rendering guest/show
+Completed in 0.00848 (117 reqs/sec) | Rendering: 0.00176 (20%) | DB: 0.00312 (36%) | 200 OK [http://127.0.0.1/guest/show/2]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:17:35) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.004138)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.004178)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 3) [0m
+Rendering guest/show
+Completed in 0.01593 (62 reqs/sec) | Rendering: 0.00287 (18%) | DB: 0.00832 (52%) | 200 OK [http://127.0.0.1/guest/show/3]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:18:29) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003871)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000799)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 1) [0m
+Rendering guest/show
+Completed in 0.01036 (96 reqs/sec) | Rendering: 0.00212 (20%) | DB: 0.00467 (45%) | 200 OK [http://127.0.0.1/guest/show/1]
+
+
+Processing GuestController#new (for 127.0.0.1 at 2009-02-22 00:18:31) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"new", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.004289)[0m   [0mSHOW FIELDS FROM guests[0m
+Rendering guest/new
+Completed in 0.01286 (77 reqs/sec) | Rendering: 0.00488 (37%) | DB: 0.00429 (33%) | 200 OK [http://127.0.0.1/guest/new]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:18:33) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"", "has_form"=>"false"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003022)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mSQL (0.000155)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.000651)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = '') LIMIT 1[0m
+  [4;35;1mSQL (0.000153)[0m   [0mCOMMIT[0m
+Rendering guest/new
+Completed in 0.01718 (58 reqs/sec) | Rendering: 0.00235 (13%) | DB: 0.00398 (23%) | 200 OK [http://127.0.0.1/guest/create]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:18:42) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"", "has_form"=>"false"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002540)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mSQL (0.000157)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.000627)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = '') LIMIT 1[0m
+  [4;35;1mSQL (0.000113)[0m   [0mCOMMIT[0m
+Rendering guest/new
+Completed in 0.01097 (91 reqs/sec) | Rendering: 0.00250 (22%) | DB: 0.00344 (31%) | 200 OK [http://127.0.0.1/guest/create]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:47:51) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"", "has_form"=>"false"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003080)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mSQL (0.000344)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.002646)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = '') LIMIT 1[0m
+  [4;35;1mSQL (0.000297)[0m   [0mCOMMIT[0m
+Rendering guest/new
+
+
+ActionView::TemplateError (undefined method `student' for #<Guest:0x24d9b9c>) on line #5 of app/views/guest/new.rhtml:
+2: <%= error_messages_for :guest %>
+3: <% form_tag :action => 'create' do %>
+4: 	<p><label for="guest_parent_id">Parent Name</label>:
+5: 		<%= text_field 'guest', 'student' %></p>
+6: 	<p><label for="guest_name">Guest Name</label>:
+7: 		<%= text_field 'guest', 'name' %></p>
+8: 	<p><label for="guest_has_form">Has Form</label>:
+
+    /Users/Jarod/.gem/ruby/1.8/gems/activerecord-1.15.5/lib/active_record/base.rb:1863:in `method_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:356:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:356:in `value_before_type_cast'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:344:in `value_before_type_cast'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:259:in `to_input_field_tag'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:162:in `text_field'
+    /Users/Jarod/repos/manager/app/views/guest/new.rhtml:5:in `_run_rhtml_47app47views47guest47new46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:108:in `capture_erb_with_buffer'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:67:in `capture'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_tag_helper.rb:51:in `form_tag'
+    /Users/Jarod/repos/manager/app/views/guest/new.rhtml:3:in `_run_rhtml_47app47views47guest47new46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:325:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:301:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:260:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:812:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:744:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:869:in `render_without_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:804:in `render_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:754:in `render_with_no_layout'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/deprecation.rb:44:in `silence'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:753:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/layout.rb:256:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:50:in `render'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:50:in `render'
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:19:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:48:03) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"", "has_form"=>"false"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002919)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mSQL (0.000491)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.000640)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = '') LIMIT 1[0m
+  [4;35;1mSQL (0.004645)[0m   [0mCOMMIT[0m
+Rendering guest/new
+Completed in 0.02405 (41 reqs/sec) | Rendering: 0.00769 (31%) | DB: 0.00870 (36%) | 200 OK [http://127.0.0.1/guest/create]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:48:14) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"John Smoe", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003386)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mSQL (0.000212)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.000765)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = 'John Smoe') LIMIT 1[0m
+  [4;35;1mSQL (0.000239)[0m   [0mINSERT INTO guests (`name`, `signed_out_at`, `has_form`, `parent_id`, `signed_in_at`) VALUES('John Smoe', NULL, 0, 0, NULL)[0m
+  [4;36;1mSQL (0.000881)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/guest/list
+Completed in 0.01357 (73 reqs/sec) | DB: 0.00548 (40%) | 302 Found [http://127.0.0.1/guest/create]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:48:14) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000723)[0m   [0mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;36;1mGuest Columns (0.003687)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.01211 (82 reqs/sec) | Rendering: 0.00447 (36%) | DB: 0.00441 (36%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:48:15) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.002383)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000698)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 4) [0m
+Rendering guest/show
+Completed in 0.00858 (116 reqs/sec) | Rendering: 0.00171 (19%) | DB: 0.00308 (35%) | 200 OK [http://127.0.0.1/guest/show/4]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:50:17) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000703)[0m   [0mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;36;1mGuest Columns (0.004084)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.01382 (72 reqs/sec) | Rendering: 0.00586 (42%) | DB: 0.00479 (34%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#new (for 127.0.0.1 at 2009-02-22 00:50:18) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"new", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003281)[0m   [0mSHOW FIELDS FROM guests[0m
+Rendering guest/new
+Completed in 0.00923 (108 reqs/sec) | Rendering: 0.00258 (28%) | DB: 0.00328 (35%) | 200 OK [http://127.0.0.1/guest/new]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:50:26) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Jarod Luebbert", "has_form"=>"false", "parent_id"=>"Bob Smith"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003378)[0m   [0;1mSHOW FIELDS FROM guests[0m
+
+
+SyntaxError (/Users/Jarod/repos/manager/app/models/student.rb:17: syntax error, unexpected ')', expecting kEND):
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:203:in `load_file'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:202:in `load_file'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:452:in `const_missing'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:464:in `const_missing'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:468:in `const_missing'
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:16:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:50:38) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Jarod Luebbert", "has_form"=>"false", "parent_id"=>"Bob Smith"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.004853)[0m   [0mSHOW FIELDS FROM guests[0m
+
+
+SyntaxError (/Users/Jarod/repos/manager/app/models/student.rb:17: syntax error, unexpected ')', expecting kEND):
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:203:in `load_file'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:202:in `load_file'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:452:in `const_missing'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:464:in `const_missing'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:468:in `const_missing'
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:16:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:50:41) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Jarod Luebbert", "has_form"=>"false", "parent_id"=>"Bob Smith"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002578)[0m   [0;1mSHOW FIELDS FROM guests[0m
+
+
+SyntaxError (/Users/Jarod/repos/manager/app/models/student.rb:17: syntax error, unexpected ')', expecting kEND):
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:203:in `load_file'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:202:in `load_file'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:452:in `const_missing'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:464:in `const_missing'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:468:in `const_missing'
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:16:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:51:02) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Jarod Luebbert", "has_form"=>"false", "parent_id"=>"Bob Smith"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.005479)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mStudent Columns (0.016506)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.106893)[0m   [0mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000225)[0m   [0;1mBEGIN[0m
+  [4;35;1mGuest Load (0.000642)[0m   [0mSELECT * FROM guests WHERE (guests.name = 'Jarod Luebbert') LIMIT 1[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mINSERT INTO guests (`name`, `signed_out_at`, `has_form`, `parent_id`, `signed_in_at`) VALUES('Jarod Luebbert', NULL, 0, 0, NULL)[0m
+  [4;35;1mSQL (0.000856)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/guest/list
+Completed in 0.14556 (6 reqs/sec) | DB: 0.14165 (97%) | 302 Found [http://127.0.0.1/guest/create]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:51:02) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.001047)[0m   [0;1mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;35;1mGuest Columns (0.004171)[0m   [0mSHOW FIELDS FROM guests[0m
+Completed in 0.01613 (61 reqs/sec) | Rendering: 0.00532 (32%) | DB: 0.00522 (32%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:51:08) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Jarod Luebbert", "has_form"=>"false", "parent_id"=>"Bob Smith"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002760)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mStudent Columns (0.006735)[0m   [0mSHOW FIELDS FROM students[0m
+  [4;36;1mStudent Load (0.000875)[0m   [0;1mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000145)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.000551)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = 'Jarod Luebbert') LIMIT 1[0m
+  [4;35;1mSQL (0.000133)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/guest/list
+Completed in 0.02015 (49 reqs/sec) | DB: 0.01120 (55%) | 302 Found [http://127.0.0.1/guest/create]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:51:08) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.000869)[0m   [0;1mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;35;1mGuest Columns (0.002517)[0m   [0mSHOW FIELDS FROM guests[0m
+Completed in 0.00996 (100 reqs/sec) | Rendering: 0.00254 (25%) | DB: 0.00339 (33%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#new (for 127.0.0.1 at 2009-02-22 00:52:08) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"new", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.033190)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Rendering guest/new
+Completed in 0.04052 (24 reqs/sec) | Rendering: 0.00259 (6%) | DB: 0.03319 (81%) | 200 OK [http://127.0.0.1/guest/new]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 00:52:15) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Bob Smith", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003735)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mStudent Columns (0.002721)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.000520)[0m   [0mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mBEGIN[0m
+  [4;35;1mGuest Load (0.000551)[0m   [0mSELECT * FROM guests WHERE (guests.name = 'Bob Smith') LIMIT 1[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mINSERT INTO guests (`name`, `signed_out_at`, `has_form`, `parent_id`, `signed_in_at`) VALUES('Bob Smith', NULL, 0, 0, NULL)[0m
+  [4;35;1mSQL (0.001116)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/guest/list
+Completed in 0.02220 (45 reqs/sec) | DB: 0.00895 (40%) | 302 Found [http://127.0.0.1/guest/create]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:52:15) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.001025)[0m   [0;1mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;35;1mGuest Columns (0.003620)[0m   [0mSHOW FIELDS FROM guests[0m
+Completed in 0.01223 (81 reqs/sec) | Rendering: 0.00435 (35%) | DB: 0.00464 (37%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:52:17) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002458)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000581)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 6) [0m
+Rendering guest/show
+Completed in 0.00845 (118 reqs/sec) | Rendering: 0.00186 (21%) | DB: 0.00304 (35%) | 200 OK [http://127.0.0.1/guest/show/6]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:54:51) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002666)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000529)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 6) [0m
+Rendering guest/show
+Completed in 0.00840 (119 reqs/sec) | Rendering: 0.00180 (21%) | DB: 0.00320 (38%) | 200 OK [http://127.0.0.1/guest/show/6]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:56:22) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002761)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000554)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 6) [0m
+Rendering guest/show
+Completed in 0.01139 (87 reqs/sec) | Rendering: 0.00457 (40%) | DB: 0.00332 (29%) | 200 OK [http://127.0.0.1/guest/show/6]
+
+
+Processing StudentController#show (for 127.0.0.1 at 2009-02-22 00:56:31) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"0", "controller"=>"student"}
+  [4;36;1mStudent Columns (0.002781)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.000598)[0m   [0mSELECT * FROM students WHERE (students.`id` = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Student with ID=0):
+    /Users/Jarod/.gem/ruby/1.8/gems/activerecord-1.15.5/lib/active_record/base.rb:1031:in `find_one'
+    /Users/Jarod/.gem/ruby/1.8/gems/activerecord-1.15.5/lib/active_record/base.rb:1014:in `find_from_ids'
+    /Users/Jarod/.gem/ruby/1.8/gems/activerecord-1.15.5/lib/active_record/base.rb:419:in `find'
+    /Users/Jarod/repos/manager/app/controllers/student_controller.rb:7:in `show'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing StudentController#show (for 127.0.0.1 at 2009-02-22 00:56:36) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"student"}
+  [4;36;1mStudent Columns (0.005044)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.000753)[0m   [0mSELECT * FROM students WHERE (students.`id` = 1) [0m
+Rendering student/show
+Completed in 0.02246 (44 reqs/sec) | Rendering: 0.00178 (7%) | DB: 0.00918 (40%) | 200 OK [http://127.0.0.1/student/show/1]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:56:51) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003244)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000999)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 6) [0m
+Rendering guest/show
+Completed in 0.00966 (103 reqs/sec) | Rendering: 0.00180 (18%) | DB: 0.00424 (43%) | 200 OK [http://127.0.0.1/guest/show/6]
+
+
+Processing GuestController#edit (for 127.0.0.1 at 2009-02-22 00:56:54) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"edit", "id"=>"6", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.004226)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000884)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 6) [0m
+Rendering guest/edit
+Completed in 0.01373 (72 reqs/sec) | Rendering: 0.00455 (33%) | DB: 0.00511 (37%) | 200 OK [http://127.0.0.1/guest/edit/6]
+
+
+Processing GuestController#update (for 127.0.0.1 at 2009-02-22 00:56:55) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Save Changes", "action"=>"update", "id"=>"6", "guest"=>{"name"=>"Bob Smith", "has_form"=>"false"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003140)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000548)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 6) [0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mBEGIN[0m
+  [4;35;1mGuest Load (0.001117)[0m   [0mSELECT * FROM guests WHERE (guests.name = 'Bob Smith' AND guests.id <> 6) LIMIT 1[0m
+  [4;36;1mGuest Update (0.001512)[0m   [0;1mUPDATE guests SET `signed_out_at` = NULL, `signed_in_at` = NULL, `has_form` = 0, `parent_id` = 0, `name` = 'Bob Smith' WHERE `id` = 6[0m
+  [4;35;1mSQL (0.022280)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/guest/show/6
+Completed in 0.03623 (27 reqs/sec) | DB: 0.02874 (79%) | 302 Found [http://127.0.0.1/guest/update/6]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:56:55) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002109)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000574)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 6) [0m
+Rendering guest/show
+Completed in 0.01082 (92 reqs/sec) | Rendering: 0.00183 (16%) | DB: 0.00268 (24%) | 200 OK [http://127.0.0.1/guest/show/6]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:56:57) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.000758)[0m   [0;1mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;35;1mGuest Columns (0.002654)[0m   [0mSHOW FIELDS FROM guests[0m
+Completed in 0.01143 (87 reqs/sec) | Rendering: 0.00444 (38%) | DB: 0.00341 (29%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:56:58) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003608)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.001015)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 1) [0m
+Rendering guest/show
+Completed in 0.01498 (66 reqs/sec) | Rendering: 0.00558 (37%) | DB: 0.00462 (30%) | 200 OK [http://127.0.0.1/guest/show/1]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:56:59) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.000850)[0m   [0;1mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;35;1mGuest Columns (0.002409)[0m   [0mSHOW FIELDS FROM guests[0m
+Completed in 0.00914 (109 reqs/sec) | Rendering: 0.00269 (29%) | DB: 0.00326 (35%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 00:57:01) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002546)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000567)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 5) [0m
+Rendering guest/show
+Completed in 0.00847 (118 reqs/sec) | Rendering: 0.00177 (20%) | DB: 0.00311 (36%) | 200 OK [http://127.0.0.1/guest/show/5]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 00:57:09) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.000698)[0m   [0;1mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;35;1mGuest Columns (0.003992)[0m   [0mSHOW FIELDS FROM guests[0m
+Completed in 0.01541 (64 reqs/sec) | Rendering: 0.00732 (47%) | DB: 0.00469 (30%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#new (for 127.0.0.1 at 2009-02-22 00:59:48) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"new", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003643)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Rendering guest/new
+
+
+ActionView::TemplateError (undefined method `parent_name' for #<Guest:0x238109c>) on line #5 of app/views/guest/new.rhtml:
+2: <%= error_messages_for :guest %>
+3: <% form_tag :action => 'create' do %>
+4: 	<p><label for="guest_parent_id">Parent Name</label>:
+5: 		<%= text_field 'guest', 'parent_name' %></p>
+6: 	<p><label for="guest_name">Guest Name</label>:
+7: 		<%= text_field 'guest', 'name' %></p>
+8: 	<p><label for="guest_has_form">Has Form</label>:
+
+    /Users/Jarod/.gem/ruby/1.8/gems/activerecord-1.15.5/lib/active_record/base.rb:1863:in `method_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:356:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:356:in `value_before_type_cast'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:344:in `value_before_type_cast'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:259:in `to_input_field_tag'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:162:in `text_field'
+    /Users/Jarod/repos/manager/app/views/guest/new.rhtml:5:in `_run_rhtml_47app47views47guest47new46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:108:in `capture_erb_with_buffer'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:67:in `capture'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_tag_helper.rb:51:in `form_tag'
+    /Users/Jarod/repos/manager/app/views/guest/new.rhtml:3:in `_run_rhtml_47app47views47guest47new46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:325:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:301:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:260:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:812:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/layout.rb:256:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:50:in `render'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:50:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#new (for 127.0.0.1 at 2009-02-22 01:00:16) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"new", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.002833)[0m   [0mSHOW FIELDS FROM guests[0m
+Rendering guest/new
+Completed in 0.01359 (73 reqs/sec) | Rendering: 0.00672 (49%) | DB: 0.00283 (20%) | 200 OK [http://127.0.0.1/guest/new]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 01:00:33) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Timmy Sidemaker", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002274)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mStudent Columns (0.002342)[0m   [0mSHOW FIELDS FROM students[0m
+  [4;36;1mStudent Load (0.007315)[0m   [0;1mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+
+
+NameError (undefined local variable or method `student' for #<GuestController:0x23ab20c>):
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:17:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 01:00:51) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Timmy Sidemaker", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003573)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mStudent Columns (0.002548)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.000835)[0m   [0mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:17:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 01:02:11) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Timmy Sidemaker", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.002946)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mStudent Columns (0.003765)[0m   [0mSHOW FIELDS FROM students[0m
+  [4;36;1mStudent Load (0.000788)[0m   [0;1mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000136)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.000474)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = 'Timmy Sidemaker') LIMIT 1[0m
+  [4;35;1mSQL (0.000236)[0m   [0mINSERT INTO guests (`name`, `signed_out_at`, `has_form`, `parent_id`, `signed_in_at`) VALUES('Timmy Sidemaker', NULL, 0, 0, NULL)[0m
+  [4;36;1mSQL (0.000810)[0m   [0;1mCOMMIT[0m
+
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:18:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 01:03:47) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Timmy Sidemaker", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003796)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mStudent Columns (0.005527)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.001573)[0m   [0mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000172)[0m   [0;1mBEGIN[0m
+  [4;35;1mGuest Load (0.001651)[0m   [0mSELECT * FROM guests WHERE (guests.name = 'Timmy Sidemaker') LIMIT 1[0m
+  [4;36;1mSQL (0.000390)[0m   [0;1mCOMMIT[0m
+
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:18:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 01:03:49) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Timmy Sidemaker", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.004166)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mStudent Columns (0.004261)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.000585)[0m   [0mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mGuest Load (0.000527)[0m   [0mSELECT * FROM guests WHERE (guests.name = 'Timmy Sidemaker') LIMIT 1[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mCOMMIT[0m
+
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:18:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 01:04:08) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Timmy Sidemaker", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.004104)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mStudent Columns (0.002805)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.000786)[0m   [0mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000446)[0m   [0;1mBEGIN[0m
+  [4;35;1mGuest Load (0.000603)[0m   [0mSELECT * FROM guests WHERE (guests.name = 'Timmy Sidemaker') LIMIT 1[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/guest/list
+Completed in 0.02660 (37 reqs/sec) | DB: 0.05981 (224%) | 302 Found [http://127.0.0.1/guest/create]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-02-22 01:04:08) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000799)[0m   [0mSELECT * FROM guests [0m
+Rendering guest/list
+  [4;36;1mGuest Columns (0.003588)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.01200 (83 reqs/sec) | Rendering: 0.00375 (31%) | DB: 0.00439 (36%) | 200 OK [http://127.0.0.1/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 01:04:10) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003759)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000764)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 7) [0m
+Rendering guest/show
+Completed in 0.01142 (87 reqs/sec) | Rendering: 0.00293 (25%) | DB: 0.00452 (39%) | 200 OK [http://127.0.0.1/guest/show/7]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 01:04:16) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003268)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.001680)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 5) [0m
+Rendering guest/show
+Completed in 0.01271 (78 reqs/sec) | Rendering: 0.00366 (28%) | DB: 0.00495 (38%) | 200 OK [http://127.0.0.1/guest/show/5]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 01:04:18) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.002622)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000558)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 6) [0m
+Rendering guest/show
+Completed in 0.00880 (113 reqs/sec) | Rendering: 0.00167 (18%) | DB: 0.00318 (36%) | 200 OK [http://127.0.0.1/guest/show/6]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-02-22 01:04:20) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.004267)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000801)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 1) [0m
+Rendering guest/show
+Completed in 0.06472 (15 reqs/sec) | Rendering: 0.00246 (3%) | DB: 0.00507 (7%) | 200 OK [http://127.0.0.1/guest/show/1]
+
+
+Processing GuestController#new (for 127.0.0.1 at 2009-02-22 01:04:23) [GET]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"action"=>"new", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.002787)[0m   [0mSHOW FIELDS FROM guests[0m
+Rendering guest/new
+Completed in 0.00860 (116 reqs/sec) | Rendering: 0.00245 (28%) | DB: 0.00279 (32%) | 200 OK [http://127.0.0.1/guest/new]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 01:09:44) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Devin Smoney", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003744)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mStudent Columns (0.002211)[0m   [0mSHOW FIELDS FROM students[0m
+  [4;36;1mStudent Load (0.000526)[0m   [0;1mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.000526)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = 'Devin Smoney') LIMIT 1[0m
+  [4;35;1mSQL (0.000202)[0m   [0mINSERT INTO guests (`name`, `signed_out_at`, `has_form`, `parent_id`, `signed_in_at`) VALUES('Devin Smoney', NULL, 0, 0, NULL)[0m
+  [4;36;1mSQL (0.000784)[0m   [0;1mCOMMIT[0m
+
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:18:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 01:12:41) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Devin Smoney", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003051)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mStudent Columns (0.002222)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.000550)[0m   [0mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mBEGIN[0m
+  [4;35;1mGuest Load (0.000635)[0m   [0mSELECT * FROM guests WHERE (guests.name = 'Devin Smoney') LIMIT 1[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mCOMMIT[0m
+Rendering guest/new
+
+
+ActionView::TemplateError (undefined method `parent_name' for #<Guest:0x23fd214>) on line #5 of app/views/guest/new.rhtml:
+2: <%= error_messages_for :guest %>
+3: <% form_tag :action => 'create' do %>
+4: 	<p><label for="guest_parent_id">Parent Name</label>:
+5: 		<%= text_field 'guest', 'parent_name' %></p>
+6: 	<p><label for="guest_name">Guest Name</label>:
+7: 		<%= text_field 'guest', 'name' %></p>
+8: 	<p><label for="guest_has_form">Has Form</label>:
+
+    /Users/Jarod/.gem/ruby/1.8/gems/activerecord-1.15.5/lib/active_record/base.rb:1863:in `method_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:356:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:356:in `value_before_type_cast'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:344:in `value_before_type_cast'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:259:in `to_input_field_tag'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:162:in `text_field'
+    /Users/Jarod/repos/manager/app/views/guest/new.rhtml:5:in `_run_rhtml_47app47views47guest47new46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:108:in `capture_erb_with_buffer'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:67:in `capture'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_tag_helper.rb:51:in `form_tag'
+    /Users/Jarod/repos/manager/app/views/guest/new.rhtml:3:in `_run_rhtml_47app47views47guest47new46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:325:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:301:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:260:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:812:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:744:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:869:in `render_without_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:804:in `render_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:754:in `render_with_no_layout'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/deprecation.rb:44:in `silence'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:753:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/layout.rb:256:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:50:in `render'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:50:in `render'
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:21:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-02-22 01:15:26) [POST]
+  Session ID: 1dd0d439dddde40f1bd5bb595785af79
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Devin Smoney", "has_form"=>"false", "parent_id"=>"Jarod Luebbert"}, "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.002761)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mStudent Columns (0.005403)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.001306)[0m   [0mSELECT * FROM students WHERE (students.`name` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mBEGIN[0m
+  [4;35;1mGuest Load (0.000545)[0m   [0mSELECT * FROM guests WHERE (guests.name = 'Devin Smoney') LIMIT 1[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mCOMMIT[0m
+Rendering guest/new
+
+
+ActionView::TemplateError (undefined method `parent_name' for #<Guest:0x2479940>) on line #5 of app/views/guest/new.rhtml:
+2: <%= error_messages_for :guest %>
+3: <% form_tag :action => 'create' do %>
+4: 	<p><label for="guest_parent_name">Parent Name</label>:
+5: 		<%= text_field 'guest', 'parent_name' %></p>
+6: 	<p><label for="guest_name">Guest Name</label>:
+7: 		<%= text_field 'guest', 'name' %></p>
+8: 	<p><label for="guest_has_form">Has Form</label>:
+
+    /Users/Jarod/.gem/ruby/1.8/gems/activerecord-1.15.5/lib/active_record/base.rb:1863:in `method_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:356:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:356:in `value_before_type_cast'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:344:in `value_before_type_cast'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:259:in `to_input_field_tag'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_helper.rb:162:in `text_field'
+    /Users/Jarod/repos/manager/app/views/guest/new.rhtml:5:in `_run_rhtml_47app47views47guest47new46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:108:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:108:in `capture_erb_with_buffer'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/capture_helper.rb:67:in `capture'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/helpers/form_tag_helper.rb:51:in `form_tag'
+    /Users/Jarod/repos/manager/app/views/guest/new.rhtml:3:in `_run_rhtml_47app47views47guest47new46rhtml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:325:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:301:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_view/base.rb:260:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:812:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:744:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:869:in `render_without_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:804:in `render_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:754:in `render_with_no_layout'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/deprecation.rb:44:in `silence'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:753:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/layout.rb:256:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:50:in `render'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:50:in `render'
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:21:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)

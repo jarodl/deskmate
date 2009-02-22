@@ -1,5 +1,9 @@
-class CreateLineItems < ActiveRecord::Migration
+class RemoveLineItems < ActiveRecord::Migration
   def self.up
+    drop_table :line_items
+  end
+
+  def self.down
     create_table :line_items do |t|
       t.column :student_id,     :integer,   :null => false
       t.column :guest_id,       :integer,   :null => false
@@ -12,10 +16,5 @@ class CreateLineItems < ActiveRecord::Migration
     
     execute "alter table line_items add constraint fk_line_item_guests
               foreign key (guest_id) references guests(id)"
-    
-  end
-
-  def self.down
-    drop_table :line_items
   end
 end

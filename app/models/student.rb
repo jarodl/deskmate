@@ -1,5 +1,4 @@
 class Student < ActiveRecord::Base
-  has_many :line_items
   
   def self.find_students_signed_in
     find(:all, :order => 'name')
@@ -15,5 +14,6 @@ class Student < ActiveRecord::Base
     errors.add(:studentid, "should be exactly 9 digits.") if studentid.size != 9
     errors.add(:room, "should be exactly 3 digits.") if room.size != 3
     errors.add(:phone, "should be exactly 12 digits.") if phone.size != 12
+    errors.add(:num_of_guests, "cannot exceed 4.") if num_of_guests > 4
   end
 end

@@ -5,6 +5,7 @@
 	<table>
 	<th><%= @guest.name %></th>
 	<tr><td>Has form:</td><td><%= @guest.has_form %></td></tr>
+	<tr><td>Parent name:</td><td><%= @guest.parent_id %></td></tr>
 	</table>
 <% end %>
 <p><%= link_to "Edit", {:action => 'edit', :id => @guest.id} %></p>
