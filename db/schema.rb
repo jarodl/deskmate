@@ -2,19 +2,19 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 2) do
 
   create_table "guests", :force => true do |t|
     t.column "name",          :string
-    t.column "parent_id",     :integer
-    t.column "has_form",      :boolean
     t.column "signed_in_at",  :datetime
     t.column "signed_out_at", :datetime
+    t.column "student_id",    :integer
+    t.column "has_form",      :boolean
   end
 
   create_table "students", :force => true do |t|
     t.column "name",          :string
-    t.column "studentid",     :string,  :limit => 9
+    t.column "student_id",    :string,  :limit => 9
     t.column "room",          :string,  :limit => 3
     t.column "phone",         :string,  :limit => 12
     t.column "num_of_guests", :integer,               :default => 0

@@ -1,8 +1,8 @@
 <h1>Add a new guest:</h1>
 <%= error_messages_for :guest %>
 <% form_tag :action => 'create' do %>
-	<p><label for="guest_parent_name">Parent Name</label>:
-		<%= text_field 'guest', 'parent_name' %></p>
+	<p><label for="student_name">Parent Name</label>:
+		<%= text_field_tag :student_name %></p>
 	<p><label for="guest_name">Guest Name</label>:
 		<%= text_field 'guest', 'name' %></p>
 	<p><label for="guest_has_form">Has Form</label>:

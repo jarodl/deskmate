@@ -4,7 +4,7 @@ class CreateGuests < ActiveRecord::Migration
       t.column :name,           :string
       t.column :signed_in_at,   :datetime
       t.column :signed_out_at,  :datetime
-      t.column :parent_id,      :integer
+      t.column :student_id,      :integer
       t.column :has_form,       :boolean
     end
   end

@@ -5,8 +5,9 @@
 	<table>
 	<th><%= @guest.name %></th>
 	<tr><td>Has form:</td><td><%= @guest.has_form %></td></tr>
-	<tr><td>Parent name:</td><td><%= @guest.parent_id %></td></tr>
+	<tr><td>Parent name:</td><td><%= @guest.student_id %></td></tr>
 	</table>
 <% end %>
 <p><%= link_to "Edit", {:action => 'edit', :id => @guest.id} %></p>
 <p><%= link_to "View All", {:action => 'list'} %></p>
+<p><%= link_to "Delete", {:action => 'delete', :id => @guest.id} %></p>

@@ -13,9 +13,9 @@ class GuestController < ApplicationController
   
   def create
     @guest = Guest.new(params[:guest])
-    @student = Student.find_by_name(params[:parent_name])
+    @student = Student.find_by_name(params[:student_name])
+    @guest.student_id = @student.id
     if @guest.save
-      @guest.parent_id = @student.id
       redirect_to :action => 'list'
     else
       render :action => 'new'

@@ -6,7 +6,7 @@
 	<th><%= @student.name %></th>
 	<tr><td>Phone:</td><td><%= @student.phone %></td></tr>
 	<tr><td>Room:</td><td><%= @student.room %></td></tr>
-	<tr><td>ID:</td><td><%= @student.studentid %></td></tr>
+	<tr><td>ID:</td><td><%= @student.student_id %></td></tr>
 	</table>
 <% end %>
 <p><%= link_to "Edit", {:action => 'edit', :id => @student.id} %></p>
