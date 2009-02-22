@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Desk Pro</title>
+  <%= stylesheet_link_tag 'main', :media => "all" %>
+</head>
+<body>
+
+	<div id="header">
+	
+		<div class="wrapper">
+		
+			<div id="header-left" class="left-col">
+				<h1>Desk Pro</h1>
+			</div>
+			
+			<div id="header-right" class="right-col">
+				<medium>Logged in as Jarod Luebbert (<a href="">Log Out</a>) | Help</medium>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div id="main" class="wrapper">
+	
+		<div id="main-left" class="left-col">
+			
+			<%= yield :layout %>
+		
+		</div>
+		
+		<div id="main-right" class="right-col">
+			<h3>Menu</h3>
+			<h4>Tasks</h4>
+			<ul id="main-menu">
+				<li><%= link_to 'Add New Guest', :action => 'new' %></li>
+				<li><a href="">Key Rental</a></li>
+				<li><a href="">Parking Pass</a></li>
+			</ul>
+			<h4>Info</h4>
+			<ul id="main-menu">
+				<li><a href="">Sign Desk Log</a></li>
+				<li><a href="">Sign Shift Log</a></li>
+				<li><a href="">Help</a></li>
+			</ul>
+		</div>
+	
+	</div>	
+
+	<div id="footer">
+	
+	</div>
+
+
+</body>
+</html>

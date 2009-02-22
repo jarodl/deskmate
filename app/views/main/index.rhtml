@@ -1,0 +1,39 @@
+<h3>Recent Activity</h3>
+
+<% form_tag students_path do %>
+  <p>
+    <%= text_field_tag :search %>
+    <%= submit_tag "Search" %>
+  </p>
+<% end %>
+
+<table id="recent">
+
+   <!-- Table header -->
+
+	<thead>
+		<tr>
+
+		</tr>
+	</thead>
+
+	<!-- Table body -->
+  
+	<tbody>
+	  <% for student in @students -%>
+	    <tr class="">
+	      <td><a href=""><%= h(student.name) %></a></td>
+	      <td><%= Time.now.strftime("%I:%M%p on %m/%d/%Y") %></td>
+	      <td><a href="">View/Edit</a></td>
+	    </tr>
+	  <% end %>
+	</tbody>
+	
+	<!-- Table footer -->
+
+	<tfoot>
+        <tr>
+        </tr>
+	</tfoot>
+
+</table>
