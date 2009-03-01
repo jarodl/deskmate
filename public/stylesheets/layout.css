@@ -113,6 +113,15 @@ h4 {}
 	padding: 5px 0 5px 20px;
 }
 
+#main-right ul li {
+	padding: 0.2em;
+}
+
+li {
+	padding: 0.4em;
+	text-indent: 0.5em;
+}
+
 /*////////*/
 /* TABLE  */
 /*////////*/
@@ -144,3 +153,119 @@ td a:hover {text-decoration: underline;}
 
 li a {text-decoration: none;}
 li a:hover {text-decoration: underline;}
+
+/*EXTRA*/
+
+/* Global styles */
+
+/* START:notice */
+#notice {
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+/* END:notice */
+
+/* Styles for admin/list */
+
+#product-list .list-title {
+	color:        #244;
+	font-weight:  bold;
+	font-size:    larger;
+}
+
+#product-list .list-image {
+  width:        60px;
+  height:       70px;
+}
+
+
+#product-list .list-actions {
+  font-size:    x-small;
+  text-align:   right;
+  padding-left: 1em;
+}
+
+#product-list .list-line-even {
+  background:   #e0f8f8;
+}
+
+#product-list .list-line-odd {
+  background:   #f8b0f8;
+}
+
+
+
+
+
+
+
+/* Styles for order form */
+
+input {
+	margin: 0.4em 1em;
+}
+
+.manager-form fieldset {
+  background: #f8f8f8;
+	margin: 1em;
+}
+
+.manager-form legend {
+  color: #fff;
+  background: #890000;
+  font-family: sans-serif;
+  padding: 0.4em 1em;
+}
+
+.manager-form label {
+  width: 5em;
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+  display: block;
+}
+
+.manager-form .submit {
+  margin-left: 5.5em;
+}
+
+/* The error box */
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

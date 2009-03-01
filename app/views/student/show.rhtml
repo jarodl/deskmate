@@ -7,6 +7,11 @@
 	<tr><td>Phone:</td><td><%= @student.phone %></td></tr>
 	<tr><td>Room:</td><td><%= @student.room %></td></tr>
 	<tr><td>ID:</td><td><%= @student.student_id %></td></tr>
+	<tr><td># of guests:</td><td><%= @student.num_of_guests %></td></tr>
+	<% @guests = Guest.find_by_student_id(@student.id).to_a %>
+	<% @guests.each do |c| %>
+		<tr><td>Guest:</td><td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td></tr>
+	<% end %>
 	</table>
 <% end %>
 <p><%= link_to "Edit", {:action => 'edit', :id => @student.id} %></p>

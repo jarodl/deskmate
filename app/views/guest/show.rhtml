@@ -5,7 +5,8 @@
 	<table>
 	<th><%= @guest.name %></th>
 	<tr><td>Has form:</td><td><%= @guest.has_form %></td></tr>
-	<tr><td>Parent name:</td><td><%= @guest.student_id %></td></tr>
+	<tr><td>Parent name:</td><td><%= Student.find_by_id(@guest.student_id).name %></td></tr>
+	<tr><td>Signed in at:</td><td><%= @guest.signed_in_at.strftime("%m/%d/%y at %I:%M%p") %></td></tr>
 	</table>
 <% end %>
 <p><%= link_to "Edit", {:action => 'edit', :id => @guest.id} %></p>

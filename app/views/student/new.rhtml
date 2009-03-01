@@ -1,14 +1,33 @@
-<h1>Add a new student:</h1>
-<%= error_messages_for :student %>
-<% form_tag :action => 'create' do %>
-	<p><label for="student_name">Name</label>:
-		<%= text_field 'student', 'name' %></p>
-	<p><label for="student_student_id">ID</label>:
-		<%= text_field 'student', 'student_id' %></p>
-	<p><label for="student_phone">Phone</label>:
-		<%= text_field 'student', 'phone' %></p>
-	<p><label for="student_room">Room</label>:
-		<%= text_field 'student', 'room' %></p>
-	<%= submit_tag "Create" %>
-<% end %>
+<div class="manager-form">
+	<%= error_messages_for 'student' %>
+	
+	<fieldset>
+		<legend>Enter Student Details</legend>
+		
+		<% form_for :student, :url => {:action => 'create', :id => @student} do |form| %>
+			<p>
+				<label for="student_name">Name:</label>
+				<%= form.text_field :name, :size => 30 %>
+			</p>
+			
+			<p>
+				<label for="student_id">ID:</label>
+				<%= form.text_field :student_id, :size => 9 %>
+			</p>
+			
+			<p>
+				<label for="student_phone">Phone #:</label>
+				<%= form.text_field :phone, :size => 12 %>
+			</p>
+			
+			<p>
+				<label for "student_room">Room #:</label>
+				<%= form.text_field :room, :size => 3 %>
+			</p>
+			
+			<%= submit_tag "Add User", :class => "submit" %>
+			
+		<% end %>
+	</fieldset>
+</div>
 <%= link_to 'Back', {:action => 'list'} %>
