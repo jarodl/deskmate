@@ -40733,3 +40733,305 @@ Processing StudentController#new (for 127.0.0.1 at 2009-03-01 01:34:56) [GET]
 Rendering  within layouts/student
 Rendering student/new
 Completed in 0.01521 (65 reqs/sec) | Rendering: 0.00619 (40%) | DB: 0.00400 (26%) | 200 OK [http://localhost/student/new]
+
+
+Processing StudentController#new (for 127.0.0.1 at 2009-03-01 04:12:18) [GET]
+  Session ID: 97b14f8c0a986791e66ac9c4ec343557
+  Parameters: {"action"=>"new", "controller"=>"student"}
+  [4;36;1mStudent Columns (0.004380)[0m   [0;1mSHOW FIELDS FROM students[0m
+Rendering  within layouts/student
+Rendering student/new
+Completed in 0.01412 (70 reqs/sec) | Rendering: 0.00494 (34%) | DB: 0.00438 (31%) | 200 OK [http://localhost/student/new]
+
+
+Processing StudentController#new (for 127.0.0.1 at 2009-03-01 04:13:58) [GET]
+  Session ID: 97b14f8c0a986791e66ac9c4ec343557
+  Parameters: {"action"=>"new", "controller"=>"student"}
+  [4;35;1mStudent Columns (0.004514)[0m   [0mSHOW FIELDS FROM students[0m
+Rendering  within layouts/student
+Rendering student/new
+Completed in 0.01422 (70 reqs/sec) | Rendering: 0.00402 (28%) | DB: 0.00451 (31%) | 200 OK [http://localhost/student/new]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-03-03 00:39:46) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mSQL (0.036426)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mGuest Load (0.025203)[0m   [0mSELECT * FROM guests [0m
+Rendering  within layouts/guest
+Rendering guest/list
+Completed in 0.25116 (3 reqs/sec) | Rendering: 0.02274 (9%) | DB: 0.06163 (24%) | 200 OK [http://localhost/guest/list]
+
+
+Processing GuestController#new (for 127.0.0.1 at 2009-03-03 00:39:47) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"new", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.004341)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Rendering  within layouts/guest
+Rendering guest/new
+Completed in 0.06667 (15 reqs/sec) | Rendering: 0.05815 (87%) | DB: 0.00434 (6%) | 200 OK [http://localhost/guest/new]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-03-03 00:39:57) [POST]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Shaun Connery", "has_form"=>"false"}, "controller"=>"guest", "student_name"=>"Jarod Luebbert"}
+  [4;35;1mStudent Columns (0.040552)[0m   [0mSHOW FIELDS FROM students[0m
+  [4;36;1mStudent Load (0.000918)[0m   [0;1mSELECT * FROM students WHERE (students.`name` = 'Jarod Luebbert') LIMIT 1[0m
+  [4;35;1mSQL (0.000198)[0m   [0mBEGIN[0m
+  [4;36;1mStudent Load (0.000773)[0m   [0;1mSELECT * FROM students WHERE (students.name = 'Jarod Luebbert' AND students.id <> 1) LIMIT 1[0m
+  [4;35;1mStudent Load (0.000536)[0m   [0mSELECT * FROM students WHERE (students.student_id = '800234788' AND students.id <> 1) LIMIT 1[0m
+  [4;36;1mStudent Update (0.000329)[0m   [0;1mUPDATE students SET `phone` = '217-556-0353', `num_of_guests` = 1, `student_id` = '800234788', `room` = '209', `name` = 'Jarod Luebbert' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000940)[0m   [0mCOMMIT[0m
+  [4;36;1mGuest Columns (0.002206)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mSQL (0.000156)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Load (0.000509)[0m   [0;1mSELECT * FROM guests WHERE (guests.name = 'Shaun Connery') LIMIT 1[0m
+  [4;35;1mSQL (0.000321)[0m   [0mINSERT INTO guests (`name`, `student_id`, `signed_out_at`, `has_form`, `signed_in_at`) VALUES('Shaun Connery', 1, NULL, 0, '2009-03-03 00:39:57')[0m
+  [4;36;1mSQL (0.000770)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/guest/list
+Completed in 0.08301 (12 reqs/sec) | DB: 0.04821 (58%) | 302 Found [http://localhost/guest/create]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-03-03 00:39:57) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000630)[0m   [0mSELECT * FROM guests [0m
+Rendering  within layouts/guest
+Rendering guest/list
+  [4;36;1mGuest Columns (0.002032)[0m   [0;1mSHOW FIELDS FROM guests[0m
+Completed in 0.00843 (118 reqs/sec) | Rendering: 0.00232 (27%) | DB: 0.00266 (31%) | 200 OK [http://localhost/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-03-03 00:39:59) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003690)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000788)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 1) [0m
+Rendering  within layouts/guest
+Rendering guest/show
+  [4;35;1mStudent Columns (0.003308)[0m   [0mSHOW FIELDS FROM students[0m
+  [4;36;1mStudent Load (0.000883)[0m   [0;1mSELECT * FROM students WHERE (students.`id` = 1) LIMIT 1[0m
+Completed in 0.02483 (40 reqs/sec) | Rendering: 0.01214 (48%) | DB: 0.00867 (34%) | 200 OK [http://localhost/guest/show/1]
+
+
+Processing GuestController#delete (for 127.0.0.1 at 2009-03-03 00:40:04) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"delete", "id"=>"1", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003958)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mGuest Load (0.000959)[0m   [0;1mSELECT * FROM guests WHERE (guests.`id` = 1) [0m
+  [4;35;1mStudent Columns (0.003460)[0m   [0mSHOW FIELDS FROM students[0m
+  [4;36;1mStudent Load (0.001059)[0m   [0;1mSELECT * FROM students WHERE (students.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000230)[0m   [0mBEGIN[0m
+  [4;36;1mStudent Load (0.000750)[0m   [0;1mSELECT * FROM students WHERE (students.name = 'Jarod Luebbert' AND students.id <> 1) LIMIT 1[0m
+  [4;35;1mStudent Load (0.000534)[0m   [0mSELECT * FROM students WHERE (students.student_id = '800234788' AND students.id <> 1) LIMIT 1[0m
+  [4;36;1mStudent Update (0.000285)[0m   [0;1mUPDATE students SET `phone` = '217-556-0353', `num_of_guests` = 0, `student_id` = '800234788', `room` = '209', `name` = 'Jarod Luebbert' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.001165)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000376)[0m   [0;1mBEGIN[0m
+  [4;35;1mGuest Destroy (0.000402)[0m   [0m DELETE FROM guests
+ WHERE `id` = 1
+[0m
+  [4;36;1mSQL (0.000755)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/guest/list
+Completed in 0.02998 (33 reqs/sec) | DB: 0.01393 (46%) | 302 Found [http://localhost/guest/delete/1]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-03-03 00:40:04) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000627)[0m   [0mSELECT * FROM guests [0m
+Rendering  within layouts/guest
+Rendering guest/list
+Completed in 0.00579 (172 reqs/sec) | Rendering: 0.00161 (27%) | DB: 0.00063 (10%) | 200 OK [http://localhost/guest/list]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-03-03 00:40:07) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.000590)[0m   [0;1mSELECT * FROM guests [0m
+Rendering  within layouts/guest
+Rendering guest/list
+Completed in 0.00604 (165 reqs/sec) | Rendering: 0.00153 (25%) | DB: 0.00059 (9%) | 200 OK [http://localhost/guest/list]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-03-03 00:40:09) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;35;1mGuest Load (0.000595)[0m   [0mSELECT * FROM guests [0m
+Rendering  within layouts/guest
+Rendering guest/list
+Completed in 0.00535 (186 reqs/sec) | Rendering: 0.00144 (26%) | DB: 0.00060 (11%) | 200 OK [http://localhost/guest/list]
+
+
+Processing GuestController#delete (for 127.0.0.1 at 2009-03-03 00:40:12) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"delete", "id"=>"1", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003994)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000838)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 1) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Guest with ID=1):
+    /Users/Jarod/.gem/ruby/1.8/gems/activerecord-1.15.5/lib/active_record/base.rb:1031:in `find_one'
+    /Users/Jarod/.gem/ruby/1.8/gems/activerecord-1.15.5/lib/active_record/base.rb:1014:in `find_from_ids'
+    /Users/Jarod/.gem/ruby/1.8/gems/activerecord-1.15.5/lib/active_record/base.rb:419:in `find'
+    /Users/Jarod/repos/manager/app/controllers/guest_controller.rb:47:in `delete'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:696:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/rescue.rb:83:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:435:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/session_management.rb:114:in `sass_old_process'
+    /Users/Jarod/.gem/ruby/1.8/gems/haml-2.0.9/lib/sass/plugin/rails.rb:19:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/base.rb:334:in `process'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/dispatcher.rb:41:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:488:in `load'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/servers/mongrel.rb:60
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-1.4.4/lib/active_support/dependencies.rb:495:in `require'
+    /Users/Jarod/.gem/ruby/1.8/gems/rails-1.2.5/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-1.13.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-03-03 00:40:16) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.000692)[0m   [0;1mSELECT * FROM guests [0m
+Rendering  within layouts/guest
+Rendering guest/list
+Completed in 0.05886 (16 reqs/sec) | Rendering: 0.00152 (2%) | DB: 0.00552 (9%) | 200 OK [http://localhost/guest/list]
+
+
+Processing GuestController#new (for 127.0.0.1 at 2009-03-03 00:40:17) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"new", "controller"=>"guest"}
+  [4;35;1mGuest Columns (0.003918)[0m   [0mSHOW FIELDS FROM guests[0m
+Rendering  within layouts/guest
+Rendering guest/new
+Completed in 0.01169 (85 reqs/sec) | Rendering: 0.00370 (31%) | DB: 0.00392 (33%) | 200 OK [http://localhost/guest/new]
+
+
+Processing GuestController#create (for 127.0.0.1 at 2009-03-03 00:40:22) [POST]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"commit"=>"Create", "action"=>"create", "guest"=>{"name"=>"Shaun Connery", "has_form"=>"false"}, "controller"=>"guest", "student_name"=>"Jarod Luebbert"}
+  [4;36;1mStudent Columns (0.004134)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.001036)[0m   [0mSELECT * FROM students WHERE (students.`name` = 'Jarod Luebbert') LIMIT 1[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudent Load (0.000712)[0m   [0mSELECT * FROM students WHERE (students.name = 'Jarod Luebbert' AND students.id <> 1) LIMIT 1[0m
+  [4;36;1mStudent Load (0.000678)[0m   [0;1mSELECT * FROM students WHERE (students.student_id = '800234788' AND students.id <> 1) LIMIT 1[0m
+  [4;35;1mStudent Update (0.000300)[0m   [0mUPDATE students SET `phone` = '217-556-0353', `num_of_guests` = 1, `student_id` = '800234788', `room` = '209', `name` = 'Jarod Luebbert' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000999)[0m   [0;1mCOMMIT[0m
+  [4;35;1mGuest Columns (0.003804)[0m   [0mSHOW FIELDS FROM guests[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mBEGIN[0m
+  [4;35;1mGuest Load (0.000670)[0m   [0mSELECT * FROM guests WHERE (guests.name = 'Shaun Connery') LIMIT 1[0m
+  [4;36;1mSQL (0.000260)[0m   [0;1mINSERT INTO guests (`name`, `student_id`, `signed_out_at`, `has_form`, `signed_in_at`) VALUES('Shaun Connery', 1, NULL, 0, '2009-03-03 00:40:22')[0m
+  [4;35;1mSQL (0.000933)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/guest/list
+Completed in 0.03380 (29 reqs/sec) | DB: 0.01397 (41%) | 302 Found [http://localhost/guest/create]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-03-03 00:40:22) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.000661)[0m   [0;1mSELECT * FROM guests [0m
+Rendering  within layouts/guest
+Rendering guest/list
+  [4;35;1mGuest Columns (0.002176)[0m   [0mSHOW FIELDS FROM guests[0m
+Completed in 0.00973 (102 reqs/sec) | Rendering: 0.00347 (35%) | DB: 0.00284 (29%) | 200 OK [http://localhost/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-03-03 00:40:23) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003935)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000897)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 2) [0m
+Rendering  within layouts/guest
+Rendering guest/show
+  [4;36;1mStudent Columns (0.002013)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.000529)[0m   [0mSELECT * FROM students WHERE (students.`id` = 1) LIMIT 1[0m
+Completed in 0.02012 (49 reqs/sec) | Rendering: 0.00847 (42%) | DB: 0.00737 (36%) | 200 OK [http://localhost/guest/show/2]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-03-03 00:40:25) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.000728)[0m   [0;1mSELECT * FROM guests [0m
+Rendering  within layouts/guest
+Rendering guest/list
+  [4;35;1mGuest Columns (0.002363)[0m   [0mSHOW FIELDS FROM guests[0m
+Completed in 0.05973 (16 reqs/sec) | Rendering: 0.00247 (4%) | DB: 0.00309 (5%) | 200 OK [http://localhost/guest/list]
+
+
+Processing GuestController#show (for 127.0.0.1 at 2009-03-03 00:40:28) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003875)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000827)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 2) [0m
+Rendering  within layouts/guest
+Rendering guest/show
+  [4;36;1mStudent Columns (0.002467)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.000645)[0m   [0mSELECT * FROM students WHERE (students.`id` = 1) LIMIT 1[0m
+Completed in 0.02237 (44 reqs/sec) | Rendering: 0.01050 (46%) | DB: 0.00781 (34%) | 200 OK [http://localhost/guest/show/2]
+
+
+Processing GuestController#delete (for 127.0.0.1 at 2009-03-03 00:40:29) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"delete", "id"=>"2", "controller"=>"guest"}
+  [4;36;1mGuest Columns (0.003545)[0m   [0;1mSHOW FIELDS FROM guests[0m
+  [4;35;1mGuest Load (0.000873)[0m   [0mSELECT * FROM guests WHERE (guests.`id` = 2) [0m
+  [4;36;1mStudent Columns (0.003526)[0m   [0;1mSHOW FIELDS FROM students[0m
+  [4;35;1mStudent Load (0.001000)[0m   [0mSELECT * FROM students WHERE (students.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000225)[0m   [0;1mBEGIN[0m
+  [4;35;1mStudent Load (0.000717)[0m   [0mSELECT * FROM students WHERE (students.name = 'Jarod Luebbert' AND students.id <> 1) LIMIT 1[0m
+  [4;36;1mStudent Load (0.000609)[0m   [0;1mSELECT * FROM students WHERE (students.student_id = '800234788' AND students.id <> 1) LIMIT 1[0m
+  [4;35;1mStudent Update (0.000264)[0m   [0mUPDATE students SET `phone` = '217-556-0353', `num_of_guests` = 0, `student_id` = '800234788', `room` = '209', `name` = 'Jarod Luebbert' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000781)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mGuest Destroy (0.000222)[0m   [0;1m DELETE FROM guests
+ WHERE `id` = 2
+[0m
+  [4;35;1mSQL (0.000797)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/guest/list
+Completed in 0.02796 (35 reqs/sec) | DB: 0.01269 (45%) | 302 Found [http://localhost/guest/delete/2]
+
+
+Processing GuestController#list (for 127.0.0.1 at 2009-03-03 00:40:29) [GET]
+  Session ID: c3557acf1b1c9c4229ebf9aea508a7b5
+  Parameters: {"action"=>"list", "controller"=>"guest"}
+  [4;36;1mGuest Load (0.000599)[0m   [0;1mSELECT * FROM guests [0m
+Rendering  within layouts/guest
+Rendering guest/list
+Completed in 0.00541 (184 reqs/sec) | Rendering: 0.00142 (26%) | DB: 0.00060 (11%) | 200 OK [http://localhost/guest/list]

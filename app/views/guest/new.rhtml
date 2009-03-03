@@ -1,8 +1,9 @@
 <h1>Add a new guest:</h1>
 
-
 <div class="manager-form">
+
 	<%= flash[:notice] %>
+
 	<%= error_messages_for :guest %>
 
 	<fieldset>
@@ -11,7 +12,7 @@
 		<% form_tag :action => 'create' do %>
 
 			<p><label for="student_name">Resident Name</label>:
-				<%= text_field_tag :student_name %></p>
+				<%= text_field_tag :student_name, params[:student_name] %></p>
 		
 			<p><label for="guest_name">Guest Name</label>:
 				<%= text_field 'guest', 'name' %></p>

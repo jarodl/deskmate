@@ -1,14 +1,27 @@
 <h3>Guest:</h3>
+
 <% if @guest.nil? %>
+
 	<p>This guest does not exist.</p>
+
 <% else %>
+
 	<table>
+
 	<th><%= @guest.name %></th>
+
 	<tr><td>Has form:</td><td><%= @guest.has_form %></td></tr>
+
 	<tr><td>Parent name:</td><td><%= Student.find_by_id(@guest.student_id).name %></td></tr>
+
 	<tr><td>Signed in at:</td><td><%= @guest.signed_in_at.strftime("%m/%d/%y at %I:%M%p") %></td></tr>
+
 	</table>
+
 <% end %>
+
 <p><%= link_to "Edit", {:action => 'edit', :id => @guest.id} %></p>
+
 <p><%= link_to "View All", {:action => 'list'} %></p>
+
 <p><%= link_to "Delete", {:action => 'delete', :id => @guest.id} %></p>

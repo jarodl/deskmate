@@ -1,2 +1,23 @@
-<h1>Login#login</h1>
-<p>Find me in app/views/login/login.rhtml</p>
+<div class="manager-form">
+	<fieldset>
+		<legend>Please Log In</legend>
+		
+		<% form_tag do %>
+			<p>
+				<label for="name">Name:</label>
+				<%= text_field_tag :name, params[:name] %>
+			</p>
+			
+			<p>
+				<label for="password">Password:</label>
+				<%= password_field_tag :password, params[:password] %>
+			</p>
+			
+			<p>
+				<%= submit_tag "Login" %>
+			</p>
+			
+		<% end %>
+			
+	</fieldset>
+</div>
