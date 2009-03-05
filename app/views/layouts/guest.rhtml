@@ -1,59 +1,199 @@
+
+  <%= stylesheet_link_tag 'main', :media => "all" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Desk Pro</title>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Main</title>
   <%= stylesheet_link_tag 'main', :media => "all" %>
 </head>
-<body>
+	<body>
 
-	<div id="header">
-	
-		<div class="wrapper">
-		
-			<div id="header-left" class="left-col">
-				<h1>Desk Pro</h1>
+		<div id="header">
+
+			<div class="wrapper">
+
+				<div id="header-left" class="left-col">
+					<a href=""><h1 id="logo">Desk Pro</h1></a>
+				</div>
+
+				<div id="header-right" class="right-col">
+					<a href=""><medium class="log-button">Account</medium></a>
+					<a href=""><medium class="log-button">Logout</medium></a>
+				</div>
+
 			</div>
-			
-			<div id="header-right" class="right-col">
-				<medium>Logged in as Jarod Luebbert (<a href="">Log Out</a>) | Help</medium>
+
+		</div>
+
+		<div id="main" class="wrapper">
+
+			<div id="main-left" class="left-col">
+				<h3>Quick Search:</h3>
+				<form method="get" id="searchform" action="#">	
+
+					<fieldset class="search">				
+
+						<input type="text" class="box" />
+						<button class="btn" title="Submit Search">Search</button>
+
+					</fieldset>
+
+				</form>
+				<div id="hr"></div>
+				<%= yield :layout %>
+				<h3>Recent Guests:</h3>
+
+				<table id="recent">
+
+				   <!-- Table header -->
+
+					<thead>
+						<tr>
+
+						</tr>
+					</thead>
+
+					<!-- Table body -->
+
+					<tbody>
+						<tr class="odd">
+							<td><a href="">Jarod Luebbert</a> signed in a guest.</td>
+							<td>5:31PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>
+						<tr class="even">
+							<td><a href="">Jordan Kirk</a> signed in a guest.</td>
+							<td>5:01PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>
+						<tr class="odd">
+							<td><a href="">Mark Sands</a> signed in a guest.</td>
+							<td>4:35PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>
+						<tr class="even">
+							<td><a href="">Nathan Billington</a> signed in a guest.</td>
+							<td>4:22PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>
+						<tr class="odd">
+							<td><a href="">Michael Fuller</a> signed in a guest.</td>
+							<td>4:15PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>
+						<tr class="even">
+							<td><a href="">Andrew Billington</a> signed in a guest.</td>
+							<td>4:10PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>
+					</tbody>
+
+					<!-- Table footer -->
+
+					<tfoot>
+				        <tr>
+				        </tr>
+					</tfoot>
+
+				</table>
+
+				<div id="hr"></div>
+
+				<h3>Recent Key Rentals:</h3>
+				<table id="recent">
+
+				   <!-- Table header -->
+
+					<thead>
+						<tr>
+
+						</tr>
+					</thead>
+
+					<!-- Table body -->
+
+					<tbody>
+						<tr class="odd">
+							<td>Room <a href="">302</a></td>
+							<td><a href="">Jon Costas</a></td>
+							<td>2:31PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>
+						<tr class="even">
+							<td>Room <a href="">120</a></td>
+							<td><a href="">Larry Paige</a></td>
+							<td>4:47PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>
+						<tr class="odd">
+							<td>Room <a href="">102</a></td>
+							<td><a href="">Ron Richards</a></td>
+							<td>7:31PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>
+						<tr class="even">
+							<td>Room <a href="">462</a></td>
+							<td><a href="">Bob Saget</a></td>
+							<td>8:02PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>
+						<tr class="odd">
+							<td>Room <a href="">324</a></td>
+							<td><a href="">Jerry Seinfeld</a></td>
+							<td>8:31PM</td>
+							<td><a href="" class="button_view">View/Edit</a></td>
+						</tr>						
+					</tbody>
+
+					<!-- Table footer -->
+
+					<tfoot>
+				        <tr>
+				        </tr>
+					</tfoot>
+
+				</table>
+
+				<div id="hr"></div>
+
 			</div>
-			
-		</div>
-		
-	</div>
-	
-	<div id="main" class="wrapper">
-	
-		<div id="main-left" class="left-col">
-			
-			<%= yield :layout %>
-		
-		</div>
-		
-		<div id="main-right" class="right-col">
-			<h3>Menu</h3>
-			<h4>Tasks</h4>
-			<ul id="main-menu">
-				<li><%= link_to 'Add New Guest', :action => 'new' %></li>
-				<li><a href="">Key Rental</a></li>
-				<li><a href="">Parking Pass</a></li>
-			</ul>
-			<h4>Info</h4>
-			<ul id="main-menu">
-				<li><a href="">Sign Desk Log</a></li>
-				<li><a href="">Sign Shift Log</a></li>
-				<li><a href="">Help</a></li>
-			</ul>
-		</div>
-	
-	</div>	
 
-	<div id="footer">
-	
-	</div>
+			<div id="main-right" class="right-col">
+				<ul id="view-menu">
+					<li id="view_students"><a href="">View Students</a></li>
+					<li id="view_guests"><a href="">View Guests</a></li>
+				</ul>
+				<ul id="edit-menu">
+					<li id="add_guest"><a href="">Add Guest</a></li>
+					<li id="remove_guest"><a href="">Remove Guest</a></li>
+				</ul>
+				<ul id="key-menu">
+					<li id="add"><a href="">Rent Key</a></li>
+					<li id="remove"><a href="">Return Key</a></li>
+				</ul>
+				<ul id="log-menu">
+					<li id="desk"><a href="">Desk Log</a></li>
+					<li id="work"><a href="">Work Log</a></li>
+				</ul>
+				<ul id="help-menu">
+					<li id="help"><a href="">Help</a></li>
+				</ul>
+			</div>
 
+		</div>	
 
-</body>
+		<div style="clear:both"></div>
+
+<!-- 		<div id="footer">
+
+			<div class="wrapper">
+				<medium><a href="">Admin</a> | <a href="">About</a> | <a href="">Contact</a></medium>
+			</div>
+
+		</div> -->
+
+	</body>
 </html>

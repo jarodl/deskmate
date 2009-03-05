@@ -16,7 +16,7 @@ class LoginController < ApplicationController
         session[:user_id] = user.id
         redirect_to(:action => "index")
       else
-        falsh.now[:notice] = "Invalid user/password combination"
+        flash.now[:notice] = "Invalid user/password combination"
       end
     end
   end

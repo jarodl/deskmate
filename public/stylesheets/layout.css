@@ -2,9 +2,9 @@
 
 body {
 	margin: 0px; padding: 0px;
-	background-color: #e5e6e4;
+	background-color: #f3f3f3;
 	font-family: Calibri, Verdana, Helvetica, sans-serif;
-	color: #000000;
+	color: #121212;
 	font-size: 14px;
 }
 
@@ -21,6 +21,14 @@ body {
 	float: right;
 }
 
+#hr {
+	background: url(../images/hr.jpg) repeat-x;
+	height: 3px;
+	width: 554px;
+	clear: both;
+	margin: 5px;
+}
+
 /*////////*/
 /* HEADER */
 /*////////*/
@@ -28,18 +36,19 @@ body {
 #header {
 	width: auto;
 	height: 100px;
-	background-color: #a10000;
-	border-bottom: 1px solid #adadad;
+	color: #ffffff;
+	background: url(../images/header-bg.jpg) #820202 repeat-x;
+	border-bottom: 1px solid #000;
 }
 
 	#header-left {
 		margin: 10px
-		width: 620px;
+		width: 720px;
 	}
 	
 	#header-right {
 		margin: 10px;
-		width: 300px;
+		width: 165px;
 	}
 
 /*////////*/
@@ -52,18 +61,19 @@ body {
 
 	#main-left {
 		margin: 10px;
-		width: 618px;
-		background-color: #fff;
+		padding: 15px;
+		width: 574px;
+		background-color: #fafafa;
 		padding-bottom: 20px;
-		border: 1px solid #c8c8c8;
+		border: 8px solid #eeeeee;
 	}
 	
 	#main-right {
 		margin: 10px;
-		width: 298px;
-		background-color: #fff;
-		padding-bottom: 20px;
-		border: 1px solid #c8c8c8;
+		padding: 15px;
+		width: 254px;
+		background-color: #fafafa;
+		border: 8px solid #eeeeee;
 	}
 
 /*////////*/
@@ -71,7 +81,16 @@ body {
 /*////////*/
 
 #footer {
+	margin-top: 5em;
+	padding: 15px;
+	text-align: center;
+	height: 50px;
+	border-top: solid 8px #eeeeee;
+	font-size: 18px;
+}
 
+#footer a {
+	color: #121212 ;
 }
 
 /*////////*/
@@ -80,13 +99,18 @@ body {
 
 h1 {}
 	
-	 #header h1 {
-		font-size: 30px;
+	 #logo {
+			display: block;
+			width: 264px;
+			height: 84px;
+			background-image: url(../images/logo.png);
+			text-indent: -9999px;
 	}
 	
 h3 {}
 	
 	#main h3 {
+		font-weight: bold;
 		font-size: 18px;
 		padding: 10px;
 	}
@@ -103,24 +127,84 @@ h4 {}
 /* BUTTON */
 /*////////*/
 	
+.log-button {
+	color: #edc2c3;
+	padding: 0 8px 0 8px;
+	font-size: 18px;
+	border: 4px #800405 solid;
+	background-color: #9b0506;
+}
 
+.menu-button {
+	background: url(../images/button-bg.png) no-repeat;
+	height: 26px;
+	width: 140px;
+	display: block;
+	padding: 5px;
+}
+
+a:hover .log-button {
+	color: #fff;
+	background-color: #b20504;
+}
 	
+li#add_guest {
+	background-image: url(../images/add_guest.png);
+}
+
+li#add {
+	background-image: url(../images/add.png);
+}
+
+li#help {
+	background-image: url(../images/help.png);
+}
+
+li#remove_guest {
+	background-image: url(../images/remove_guest.png);
+}
+
+li#remove {
+	background-image: url(../images/remove.png);
+}
+
+li#work {
+	background-image: url(../images/work.png);
+}
+
+li#desk {
+	background-image: url(../images/desk.png);
+}
+
+li#view_guests {
+	background-image: url(../images/view_guests.png);
+}
+
+li#view_students {
+	background-image: url(../images/view_students.png);
+}
+
+
+
 /*////////*/
 /* LISTS  */
 /*////////*/
 
 #main-right ul {
-	padding: 5px 0 5px 20px;
+	padding-top: .5em;
+	padding-bottom: .5em;
 }
 
 #main-right ul li {
-	padding: 0.2em;
+	padding-top: 0.3em;
+	padding-left: 1.6em;
+	padding-bottom: 0.3em;
+	font-weight: bolder;
+	background-position: 0em;
+	background-repeat: no-repeat;
 }
 
-li {
-	padding: 0.4em;
-	text-indent: 0.5em;
-}
+
 
 /*////////*/
 /* TABLE  */
@@ -128,6 +212,7 @@ li {
 
 table {
 	width:100%;
+	padding: 15px;
 }
 
 td {
@@ -153,6 +238,26 @@ td a:hover {text-decoration: underline;}
 
 li a {text-decoration: none;}
 li a:hover {text-decoration: underline;}
+
+#main-right a {
+	color: #121212;
+	font-size: 18px;
+}
+
+/*///////*/
+/* EXTRA */
+/*///////*/
+
+/*////////*/
+/* SEARCH */
+/*////////*/
+.search {
+	width: 250px;
+}
+.search input.box {
+	background-color: #f3f3f3;
+	border: 1px solid #d7d7d7;
+}
 
 /*EXTRA*/
 
@@ -209,13 +314,13 @@ input {
 }
 
 .manager-form fieldset {
-  background: #f8f8f8;
+  background: #f4f4f4;
 	margin: 1em;
 }
 
 .manager-form legend {
-  color: #fff;
-  background: #890000;
+  color: #dfd;
+  background: #141;
   font-family: sans-serif;
   padding: 0.4em 1em;
 }
