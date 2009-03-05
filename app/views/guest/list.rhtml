@@ -5,16 +5,18 @@
 <% else %>
 
 	<p>These are the current students in our system:</p>
-
-	<ul id="guests">
-
+	
+	<table>
+		
+		<tr><th><h3>Recent Guests</h3></th></tr>
+		
 		<% @guests.each do |c| %>
-
-			<li><%= link_to c.name, {:action => 'show', :id => c.id} -%></li>
-
+		
+		<tr><td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td></tr>
+		
 		<% end %>
-
-	</ul>
+		
+	</table>
 
 <% end %>
 

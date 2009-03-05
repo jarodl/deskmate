@@ -1,11 +1,19 @@
 <% if @students.blank? %>
 	<p>There are not any students currently in the system.</p>
 <% else %>
-	<p>These are the current students in our system:</p>
-	<ul id="students">
+	<h3>Current Students:</h3>
+	<table>
+		
 		<% @students.each do |c| %>
-			<li><%= link_to c.name, {:action => 'show', :id => c.id} -%></li>
+		
+			<tr>
+				<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+				<td><%= link_to c.student_id, {:action => 'show', :id => c.id}  -%></td>
+			</tr>
+			
 		<% end %>
-	</ul>
+		
+	</table>
+	
 <% end %>
 <p><%= link_to "Add new student", {:action => 'new'} %></p>
