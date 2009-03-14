@@ -1,4 +1,4 @@
-class StudentController < ApplicationController
+class StudentController < ApplicationController  
   def list
     @students = Student.find(:all)
   end

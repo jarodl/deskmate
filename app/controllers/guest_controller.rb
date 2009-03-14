@@ -52,4 +52,8 @@ class GuestController < ApplicationController
     redirect_to :action => 'list'
   end
   
+  def edit_list
+    @guests = Guest.find(:all)
+  end
+  
 end

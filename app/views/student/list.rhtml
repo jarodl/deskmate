@@ -9,6 +9,7 @@
 			<tr>
 				<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
 				<td><%= link_to c.student_id, {:action => 'show', :id => c.id}  -%></td>
+				<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
 			</tr>
 			
 		<% end %>

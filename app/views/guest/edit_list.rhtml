@@ -1,0 +1,26 @@
+<% if @guests.blank? %>
+
+	<h3>There are not any students currently in the system.</h3>
+
+<% else %>
+	
+	<table id="recent">
+		
+		<tr><th><h3>Recent Guests</h3></th></tr>
+		
+		<% @guests.each do |c| %>
+		
+		<tr>
+			<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+			<td><%= link_to Student.find_by_id(c.student_id).name, show_url(:controller => 'student', :action => 'show', :id => c.student_id) %></td>
+			<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+			<td><%= link_to 'Delete', {:confirm => 'Are you sure?', :action => 'delete', :id => c.id} %></td>
+		</tr>
+		
+		<% end %>
+		
+	</table>
+
+<% end %>
+
+<h3><%= link_to "Add new guest", {:action => 'new'} %></h3>

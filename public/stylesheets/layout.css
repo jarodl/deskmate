@@ -314,13 +314,13 @@ input {
 }
 
 .manager-form fieldset {
-  background: #f4f4f4;
+	background: #f4f4f4;
 	margin: 1em;
 }
 
 .manager-form legend {
-  color: #dfd;
-  background: #141;
+  color: #fff;
+  background: #820202;
   font-family: sans-serif;
   padding: 0.4em 1em;
 }
@@ -341,7 +341,7 @@ input {
 
 .fieldWithErrors {
   padding: 2px;
-  background-color: red;
+  background-color: #f4f4f4;
   display: table;
 }
 

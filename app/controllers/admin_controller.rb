@@ -2,9 +2,12 @@ class AdminController < ApplicationController
   before_filter :authorize
   
   def index
+    list
+    render :action => 'list'
   end
   
   def list
+    
   end
   
   def show

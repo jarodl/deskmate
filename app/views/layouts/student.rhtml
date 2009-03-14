@@ -34,30 +34,26 @@
 				<h3>Quick Search:</h3>
 				<form method="get" id="searchform" action="#">	
 
-					<fieldset class="search">				
-
-						<input type="text" class="box" />
-						<button class="btn" title="Submit Search">Search</button>
-
-					</fieldset>
+					<input type="text" class="box" />
+					<button class="btn" title="Submit Search">Search</button>
 
 				</form>
+				
 				<div id="hr"></div>
 				
 				<%= yield :layout %>
 
-				<div id="hr"></div>
 
 			</div>
 
 			<div id="main-right" class="right-col">
 				<ul id="view-menu">
-					<li id="view_students"><a href="">View Students</a></li>
-					<li id="view_guests"><a href="">View Guests</a></li>
+					<li id="view_students"><%= link_to "View Students", view_url(:controller => 'student', :action => 'list') %></li>
+					<li id="view_guests"><%= link_to "View Guests", view_url(:controller => 'guest', :action => 'list') %></li>
 				</ul>
 				<ul id="edit-menu">
-					<li id="add_guest"><a href="">Add Guest</a></li>
-					<li id="remove_guest"><a href="">Remove Guest</a></li>
+					<li id="add_guest"><%= link_to "Add Guest", view_url(:controller => 'guest', :action => 'new') %></li>
+					<li id="remove_guest"><%= link_to "Remove Guest", view_url(:controller => 'guest', :action => 'edit_list')%></li>
 				</ul>
 				<ul id="key-menu">
 					<li id="add"><a href="">Rent Key</a></li>
@@ -75,14 +71,6 @@
 		</div>	
 
 		<div style="clear:both"></div>
-
-<!-- 		<div id="footer">
-
-			<div class="wrapper">
-				<medium><a href="">Admin</a> | <a href="">About</a> | <a href="">Contact</a></medium>
-			</div>
-
-		</div> -->
 
 	</body>
 </html>

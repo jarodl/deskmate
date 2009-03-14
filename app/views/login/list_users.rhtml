@@ -1,2 +1,23 @@
-<h1>Login#list_users</h1>
-<p>Find me in app/views/login/list_users.rhtml</p>
+<% if @users.blank? %>
+	<p>There are not any students currently in the system.</p>
+<% else %>
+	<h3>Current Users:</h3>
+	<ul>
+		
+	  <% for user in @users %>
+	    <li><%= link_to "[X]", { # link_to options
+	                             :controller => 'login', 
+	                             :action => 'delete_user',
+	                             :id => user},
+	                           { # html options
+	                             :method  => :post,
+	                             :confirm => "Really delete #{user.name}?"
+	                           } %>
+	        <%= h(user.name) %>
+	    </li>
+	  <% end %>
+		
+	</ul>
+	
+<% end %>
+<p><%= link_to "Add new user", {:action => 'add_user'} %></p>

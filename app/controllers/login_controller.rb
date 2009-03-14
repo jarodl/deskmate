@@ -1,5 +1,7 @@
 class LoginController < ApplicationController
+  before_filter :authorize, :except => :login
   layout "admin"
+  
   def add_user
     @user = User.new(params[:user])
     if request.post? and @user.save
@@ -22,14 +24,29 @@ class LoginController < ApplicationController
   end
 
   def logout
+    session[:user_id] = nil
+    flash[:notice] = "Logged Out"
+    redirect_to(:action => "login")
   end
 
   def  index
   end
 
   def delete_user
+    if request.post?
+      user = User.find(params[:id])
+      begin
+        user.destroy
+        flash[:notice] = "User #{@user.name} deleted"
+      rescue Exception => e
+        flash[:notice] = e.message
+      end
+    end
+    redirect_to(:action => :list_users)
   end
 
   def list_users
+    @users = User.find(:all)
   end
+  
 end

@@ -1,5 +1,6 @@
 <h1>Edit student:</h1>
 <%= error_messages_for :student %>
+
 <% form_tag :action => 'update', :id => @student do %>
 	<p><label for="student_name">Name</label>:
 		<%= text_field 'student', 'name' %></p>

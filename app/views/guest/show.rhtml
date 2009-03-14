@@ -2,7 +2,7 @@
 
 <% if @guest.nil? %>
 
-	<p>This guest does not exist.</p>
+	<h3>This guest does not exist.</h3>
 
 <% else %>
 
@@ -12,16 +12,17 @@
 
 	<tr><td>Has form:</td><td><%= @guest.has_form %></td></tr>
 
-	<tr><td>Parent name:</td><td><%= Student.find_by_id(@guest.student_id).name %></td></tr>
+	<tr><td>Parent name:</td><td><%= link_to Student.find_by_id(@guest.student_id).name, 
+	show_url(:controller => 'student', :action => 'show' , :id => @guest.student_id) %></td></tr>
 
 	<tr><td>Signed in at:</td><td><%= @guest.signed_in_at.strftime("%m/%d/%y at %I:%M%p") %></td></tr>
+	
+	<tr><td><%= link_to "Edit", {:action => 'edit', :id => @guest.id} %></td></tr>
+	
+	<tr><td><%= link_to "Delete", {:action => 'delete', :id => @guest.id} %></td></tr>
+	
+	<tr><td><%= link_to "View All", {:action => 'list'} %></td></tr>
 
 	</table>
 
 <% end %>
-
-<p><%= link_to "Edit", {:action => 'edit', :id => @guest.id} %></p>
-
-<p><%= link_to "View All", {:action => 'list'} %></p>
-
-<p><%= link_to "Delete", {:action => 'delete', :id => @guest.id} %></p>

@@ -1,18 +1,19 @@
 <% if @guests.blank? %>
 
-	<p>There are not any students currently in the system.</p>
+	<h3>There are not any students currently in the system.</h3>
 
 <% else %>
-
-	<p>These are the current students in our system:</p>
 	
-	<table>
+	<table id="recent">
 		
 		<tr><th><h3>Recent Guests</h3></th></tr>
 		
 		<% @guests.each do |c| %>
 		
-		<tr><td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td></tr>
+		<tr>
+			<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+			<td><%= link_to Student.find_by_id(c.student_id).name, show_url(:controller => 'student', :action => 'show', :id => c.student_id) %></td>
+		</tr>
 		
 		<% end %>
 		
@@ -20,4 +21,4 @@
 
 <% end %>
 
-<p><%= link_to "Add new guest", {:action => 'new'} %></p>
+<h3><%= link_to "Add new guest", {:action => 'new'} %></h3>

@@ -10,7 +10,7 @@
 	<tr><td># of guests:</td><td><%= @student.num_of_guests %></td></tr>
 	<% @guests = Guest.find_by_student_id(@student.id).to_a %>
 	<% @guests.each do |c| %>
-		<tr><td>Guest:</td><td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td></tr>
+		<tr><td>Guest:</td><td><%= link_to c.name, show_url(:controller => 'guest', :action => 'show', :id => c.id) -%></td></tr>
 	<% end %>
 	</table>
 <% end %>
