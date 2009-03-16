@@ -30,16 +30,16 @@ h2. Views
 
 h3. Guest
 
-	*<tt>list</tt>
-	*<tt>show</tt>
-	*<tt>new</tt>
-	*<tt>edit</tt>
-	*<tt>who_signed_in</tt>
+	*<tt>list</tt> view
+	*<tt>show</tt> view
+	*<tt>new</tt> view
+	*<tt>edit</tt> view
+	*<tt>who_signed_in</tt> view
 	
 h3. Student
 
-	*<tt>list</tt>
-	*<tt>show</tt>
-	*<tt>new</tt>
-	*<tt>edit</tt>
-	*<tt>show_guests</tt>
+	*<tt>list</tt> view
+	*<tt>show</tt> view
+	*<tt>new</tt> view
+	*<tt>edit</tt> view
+	*<tt>show_guests</tt> view
