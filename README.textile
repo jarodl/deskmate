@@ -1,6 +1,6 @@
 h1. Desk Pro
 
-Desk Pro is a Ruby on Rails application for managing the flow of <tt>students</tt> and <tt>guests</tt> entering a dorm. Although you could substitute students for employees and dorm for almost anything.
+Desk Pro is a Ruby on Rails application for managing the flow of <tt>students</tt> and <tt>guests</tt> entering a dorm. Although you could substitute students for employees and dorm for almost anything. This README is more of a way for me to keep track of things I need to finish.
 
 h2. Application Specifications
 
@@ -30,16 +30,16 @@ h2. Views
 
 h3. Guest
 
-* <tt>list</tt> view
-* <tt>show</tt> view
-* <tt>new</tt> view
-* <tt>edit</tt> view
-* <tt>who_signed_in</tt> view
+* <tt>list</tt>
+* <tt>show</tt>
+* <tt>new</tt>
+* <tt>edit</tt>
+* <tt>who_signed_in</tt>
 	
 h3. Student
 
-* <tt>list</tt> view
-* <tt>show</tt> view
-* <tt>new</tt> view
-* <tt>edit</tt> view
-* <tt>show_guests</tt> view
+* <tt>list</tt>
+* <tt>show</tt>
+* <tt>new</tt>
+* <tt>edit</tt>
+* <tt>show_guests</tt>
