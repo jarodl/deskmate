@@ -1,11 +1,13 @@
 class Guest < ActiveRecord::Base
-  belongs_to      :student
+  belongs_to :students
   # . . .
   
-  def self.add_new_guest(guest)
-    @student_id = Student.find_by_name(guest[:student_name].to_s).id
-    @guest = Guest.new(guest)
-    @guest.student_id = @student_id
+  def student_name
+    students.name if students
+  end
+  
+  def student_name=(name)
+    self.student_id = Student.find_by_name(name).id unless name.blank?
   end
   
   # validation stuff. . .

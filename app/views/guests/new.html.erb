@@ -7,17 +7,23 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
+  
   <p>
-    <label for="student_name">Student</label><br />
-    <%= text_field_tag :student_name, params[:student_name], :size => '30' %>
+    <%= f.label :student_name %>
+    <%= text_field_with_auto_complete :guest, :student_name, { :size => 30 }, 
+    { :url => formatted_students_path(:js), 
+      :method => :get, :with => "'search=' + element.value"} %>
   </p>
+  
   <p>
     <%= f.label :has_form %><br />
     <%= select( "guest", "has_form", {"Yes" => "true", "No" => "false"} ) %>
   </p>
+  
   <p>
     <%= f.submit "Create" %>
   </p>
+  
 <% end %>
 
 <%= link_to 'Back', guests_path %>

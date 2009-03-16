@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-  has_many        :guest
+  has_many        :guests
   # . . .
   
   # validation stuff. . .

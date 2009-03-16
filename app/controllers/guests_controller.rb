@@ -1,4 +1,5 @@
 class GuestsController < ApplicationController
+      
   def index
     @guests = Guest.find(:all)
   end
@@ -12,10 +13,10 @@ class GuestsController < ApplicationController
   end
   
   def create
-    @student = Student.find_by_name(params[:student_name])
+    @student = Student.find_by_name(params[:guest][:student_name])
     
     if @student.nil?
-      flash[:notice] = "#{params[:student_name]} was not found."
+      flash[:notice] = "#{params[:guest][:student_name]} was not found."
       redirect_to :action => :new
     else
       @student.num_of_guests += 1

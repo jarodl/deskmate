@@ -1,9 +1,11 @@
 class StudentsController < ApplicationController
+    
   def index
-    @students = Student.find(:all)
+    @students = Student.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
     
     respond_to do |format|
       format.html # index.html.erb
+      format.js
     end
   end
   

@@ -15,13 +15,7 @@
     <td><%= @student.phone %></td>
   </tr>
   
-  <% if @guests.nil? %>
-    
-    <tr>
-      <td>No guests signed in.</td>
-    </tr>
-    
-  <% else %>
+  <% if !@guests.nil? %>
   
   <% @guests = @guests.to_a %>
   
