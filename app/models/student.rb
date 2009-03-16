@@ -1,20 +1,16 @@
 class Student < ActiveRecord::Base
-  has_many :guests
-
-  def self.find_students_with_guest
-    find(:all, :conditions => ["num_of_guests > 0"])
-  end
+  has_many        :guest
+  # . . .
   
-  validates_numericality_of :student_id, :only_integer => true
-  validates_presence_of :name, :student_id, :room, :phone
-  validates_uniqueness_of :name, :student_id
-  validates_size_of :student_id, :is => 9
-  validates_size_of :phone, :is => 12
-  validates_size_of :room, :is => 3
-  validates_size_of :num_of_guests, :maximum => 4
-  
-  #validates_format_of  :phone,
-  #                     :with =>
-  #                     :message => "must be in the format 555-555-5555"
-
+  # validation stuff. . .
+  validates_presence_of :name, :student_id, :room
+  validates_uniqueness_of :student_id
+  validate :no_more_than_four_guests
+  validates_length_of :student_id,
+                      :is => 9,
+                      :message => "should be 9 digits"
+  protected
+    def no_more_than_four_guests
+      errors.add(:num_of_guests, 'should be less than 5') if num_of_guests > 4
+    end
 end

@@ -1,0 +1,21 @@
+<h1>Editing guest</h1>
+
+<% form_for(@guest) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :has_form %><br />
+    <%= select( "guest", "has_form", {"Yes" => "true", "No" => "false"} ) %>
+  </p>
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+  
+<% end %>
+
+<%= link_to 'Show', @guest %> |
+<%= link_to 'View All', guests_path %>

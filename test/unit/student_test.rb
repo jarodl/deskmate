@@ -1,10 +1,8 @@
-require File.dirname(__FILE__) + '/../test_helper'
+require 'test_helper'
 
-class StudentTest < Test::Unit::TestCase
-  fixtures :students
-
+class StudentTest < ActiveSupport::TestCase
   # Replace this with your real tests.
-  def test_truth
+  test "the truth" do
     assert true
   end
 end

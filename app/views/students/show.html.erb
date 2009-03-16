@@ -1,0 +1,46 @@
+<h2>
+  <%= @student.name %>
+</h2><br />
+
+<table>
+  <tr>
+    <th><b>ID:</b></th>
+    <th><b>Room:</b></th>
+    <th><b>Phone:</b></th>
+  </tr>
+  
+  <tr>
+    <td><%= @student.student_id %></td>
+    <td><%= @student.room %></td>
+    <td><%= @student.phone %></td>
+  </tr>
+  
+  <% if @guests.nil? %>
+    
+    <tr>
+      <td>No guests signed in.</td>
+    </tr>
+    
+  <% else %>
+  
+  <% @guests = @guests.to_a %>
+  
+    <tr>
+      <th><b>Guests:</b></th>
+    </tr>
+  
+    <% for guest in @guests %>
+    
+      <tr>
+        <td><%= link_to guest.name, guest_path(guest) %></td>
+      </tr>
+      
+    <% end %>
+    
+  <% end %>
+  
+</table>
+<br />
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'View All', students_path %>

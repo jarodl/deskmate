@@ -1,376 +1,93 @@
-@charset "UTF-8";  
+@import "reset.css";
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
 
 body {
-	margin: 0px; padding: 0px;
-	background-color: #f3f3f3;
-	font-family: Calibri, Verdana, Helvetica, sans-serif;
-	color: #121212;
-	font-size: 14px;
-}
-
-.wrapper {
-	width: 960px;
-	margin: 0 auto;
-}
-
-.left-col {
-	float: left;
-}
-
-.right-col {
-	float: right;
-}
-
-#hr {
-	background: url(../images/hr.jpg) repeat-x;
-	height: 3px;
-	width: 554px;
-	clear: both;
-	margin: 5px;
-}
-
-/*////////*/
-/* HEADER */
-/*////////*/
-
-#header {
-	width: auto;
-	height: 100px;
-	color: #ffffff;
-	background: url(../images/header-bg.jpg) #820202 repeat-x;
-	border-bottom: 1px solid #000;
-}
-
-	#header-left {
-		margin: 10px
-		width: 720px;
-	}
-	
-	#header-right {
-		margin: 10px;
-		width: 165px;
-	}
-
-/*////////*/
-/*  MAIN  */
-/*////////*/
-
-#main {
-	margin: 0 auto;
-}
-
-	#main-left {
-		margin: 10px;
-		padding: 15px;
-		width: 574px;
-		background-color: #fafafa;
-		padding-bottom: 20px;
-		border: 8px solid #eeeeee;
-	}
-	
-	#main-right {
-		margin: 10px;
-		padding: 15px;
-		width: 254px;
-		background-color: #fafafa;
-		border: 8px solid #eeeeee;
-	}
-
-/*////////*/
-/* FOOTER */
-/*////////*/
-
-#footer {
-	margin-top: 5em;
-	padding: 15px;
-	text-align: center;
-	height: 50px;
-	border-top: solid 8px #eeeeee;
-	font-size: 18px;
-}
-
-#footer a {
-	color: #121212 ;
-}
-
-/*////////*/
-/*  TEXT  */
-/*////////*/
-
-h1 {}
-	
-	 #logo {
-			display: block;
-			width: 264px;
-			height: 84px;
-			background-image: url(../images/logo.png);
-			text-indent: -9999px;
-	}
-	
-h3 {}
-	
-	#main h3 {
-		font-weight: bold;
-		font-size: 18px;
-		padding: 10px;
-	}
-	
-h4 {}
-
-	#main-right h4 {
-		font-weight: bold;
-		padding: 10px;
-		font-size: 15px;
-	}
-	
-/*////////*/
-/* BUTTON */
-/*////////*/
-	
-.log-button {
-	color: #edc2c3;
-	padding: 0 8px 0 8px;
-	font-size: 18px;
-	border: 4px #800405 solid;
-	background-color: #9b0506;
-}
-
-.menu-button {
-	background: url(../images/button-bg.png) no-repeat;
-	height: 26px;
-	width: 140px;
-	display: block;
-	padding: 5px;
-}
-
-a:hover .log-button {
-	color: #fff;
-	background-color: #b20504;
-}
-	
-li#add_guest {
-	background-image: url(../images/add_guest.png);
-}
-
-li#add {
-	background-image: url(../images/add.png);
-}
-
-li#help {
-	background-image: url(../images/help.png);
-}
-
-li#remove_guest {
-	background-image: url(../images/remove_guest.png);
-}
-
-li#remove {
-	background-image: url(../images/remove.png);
-}
-
-li#work {
-	background-image: url(../images/work.png);
-}
-
-li#desk {
-	background-image: url(../images/desk.png);
-}
-
-li#view_guests {
-	background-image: url(../images/view_guests.png);
-}
-
-li#view_students {
-	background-image: url(../images/view_students.png);
-}
-
-
-
-/*////////*/
-/* LISTS  */
-/*////////*/
-
-#main-right ul {
-	padding-top: .5em;
-	padding-bottom: .5em;
-}
-
-#main-right ul li {
-	padding-top: 0.3em;
-	padding-left: 1.6em;
-	padding-bottom: 0.3em;
-	font-weight: bolder;
-	background-position: 0em;
-	background-repeat: no-repeat;
-}
-
-
-
-/*////////*/
-/* TABLE  */
-/*////////*/
-
-table {
-	width:100%;
-	padding: 15px;
-}
-
-td {
-	padding:.5em 1em;
-}
-
-tr.odd {
-	background-color: #f8f8f8;
-}
-
-/*////////*/
-/* LINKS  */
-/*////////*/
-
-medium a {
-	color: white;
-	text-decoration: none;
-}
-medium a:hover {text-decoration: underline;}
-
-td a {text-decoration: none;}
-td a:hover {text-decoration: underline;}
-
-li a {text-decoration: none;}
-li a:hover {text-decoration: underline;}
-
-#main-right a {
-	color: #121212;
-	font-size: 18px;
-}
-
-/*///////*/
-/* EXTRA */
-/*///////*/
-
-/*////////*/
-/* SEARCH */
-/*////////*/
-.search {
-	width: 250px;
-}
-.search input.box {
-	background-color: #f3f3f3;
-	border: 1px solid #d7d7d7;
-}
-
-/*EXTRA*/
-
-/* Global styles */
-
-/* START:notice */
-#notice {
-  border: 2px solid red;
-  padding: 1em;
-  margin-bottom: 2em;
-  background-color: #f0f0f0;
-  font: bold smaller sans-serif;
-}
-/* END:notice */
-
-/* Styles for admin/list */
-
-#product-list .list-title {
-	color:        #244;
-	font-weight:  bold;
-	font-size:    larger;
-}
-
-#product-list .list-image {
-  width:        60px;
-  height:       70px;
-}
-
-
-#product-list .list-actions {
-  font-size:    x-small;
-  text-align:   right;
-  padding-left: 1em;
-}
-
-#product-list .list-line-even {
-  background:   #e0f8f8;
-}
-
-#product-list .list-line-odd {
-  background:   #f8b0f8;
-}
-
-
-
-
-
-
-
-/* Styles for order form */
-
-input {
-	margin: 0.4em 1em;
-}
-
-.manager-form fieldset {
-	background: #f4f4f4;
+	line-height: 1;
+	color: black;
+	background: white;
+	font-size: 87.5%;
+	font-family: Helvetica, Arial, sans-serif;
 	margin: 1em;
 }
 
-.manager-form legend {
-  color: #fff;
-  background: #820202;
-  font-family: sans-serif;
-  padding: 0.4em 1em;
+.wrapper {
+	width: 600px;
+	margin: 0 auto;
 }
 
-.manager-form label {
-  width: 5em;
-  float: left;
-  text-align: right;
-  margin-right: 0.5em;
-  display: block;
+ol, ul {
+  list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  	border-collapse: separate;
+  	border-spacing: 0;
+	border: 2px solid #F6F6F6;
+	width: 600px;
 }
 
-.manager-form .submit {
-  margin-left: 5.5em;
+th {
+	font-weight: bold;
 }
 
-/* The error box */
-
-.fieldWithErrors {
-  padding: 2px;
-  background-color: #f4f4f4;
-  display: table;
+tr.odd {
 }
 
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+tr.even {
+	background-color: #F4F4F4;
 }
 
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
+caption, th, td {
+  	text-align: left;
+  	font-weight: none;
+	padding: 8px 5px 8px 5px;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  	content: "";
+}
+blockquote, q {
+  	quotes: "" "";
 }
 
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
+h1 {
+  font-family: Georgia, Times, serif;
+  font-size: 3em;
+/*  width: 60%;*/
+  margin: 0.5em auto;
 }
 
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
+h2 {
+	font-family: Georgia, Times, serif;
+	font-size: 2em;
+	margin: 0.5em, auto;
+}
+
+p, ul {
+/*  width: 60% !important;*/
+/*  margin: 0 auto !important;*/
+  padding-bottom: 2em;
+}
+
+form {
+	margin: 2em auto !important;
+}
+
+input {
+  font-size: 2em;
+}
+
+input[type="submit"] {
+	float: right;
+}
+
+#footer {
+  font-size: 0.75em;
+  padding-left: 3em;
+  height: 3em;
+  margin-top: 2em;
 }

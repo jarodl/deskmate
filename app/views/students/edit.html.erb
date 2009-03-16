@@ -1,0 +1,29 @@
+<h1>Editing student</h1>
+
+<% form_for(@student) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :student_id %><br />
+    <%= f.text_field :student_id %>
+  </p>
+  <p>
+    <%= f.label :room %><br />
+    <%= f.text_field :room %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+  
+<% end %>
+
+<%= link_to 'Show', @student %> |
+<%= link_to 'Back', students_path %>

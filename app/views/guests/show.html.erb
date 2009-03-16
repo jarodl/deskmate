@@ -1,0 +1,21 @@
+<h2>
+  <%= @guest.name %>
+</h2><br />
+
+<table>
+  <tr>
+    <th>Student</th>
+    <th>Overnight</th>
+  </tr>
+  
+  <tr>
+    <% @student = Student.find_by_id(@guest.student_id) %>
+    <td><%= link_to @student.name, student_path(@student.id) %></td>
+    <td><%= @guest.has_form %></td>
+  </tr>
+    
+</table>
+<br />
+
+<%= link_to 'Edit', edit_guest_path(@guest) %> |
+<%= link_to 'View All', guests_path %>

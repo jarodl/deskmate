@@ -1,0 +1,23 @@
+<h1>New guest</h1>
+
+<% form_for(@guest) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <label for="student_name">Student</label><br />
+    <%= text_field_tag :student_name, params[:student_name], :size => '30' %>
+  </p>
+  <p>
+    <%= f.label :has_form %><br />
+    <%= select( "guest", "has_form", {"Yes" => "true", "No" => "false"} ) %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', guests_path %>
