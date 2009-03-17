@@ -13,21 +13,11 @@ class GuestsController < ApplicationController
   end
   
   def create
-    @student = Student.find_by_name(params[:guest][:student_name])
-    
-    if @student.nil?
-      flash[:notice] = "#{params[:guest][:student_name]} was not found."
-      redirect_to :action => :new
+    @guest = Guest.new(params[:guest])
+    if @guest.save
+      redirect_to :action => 'index'
     else
-      @student.num_of_guests += 1
-      @student.save
-      @guest = Guest.new(params[:guest])
-      @guest.student_id = @student.id
-      if @guest.save
-        redirect_to :action => 'index'
-      else
-        render :action => 'new'
-      end
+      render :action => 'new'
     end
   end
   
@@ -44,12 +34,10 @@ class GuestsController < ApplicationController
     end
   end
   
-  def delete
+  def destroy
     @guest = Guest.find(params[:id])
-    @student = Student.find_by_id(@guest.student_id)
-    @student.num_of_guests -= 1
-    @student.save
     @guest.destroy
     redirect_to :action => 'index'
   end
+  
 end

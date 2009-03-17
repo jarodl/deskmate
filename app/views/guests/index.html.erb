@@ -18,8 +18,9 @@
       <tr class = " <%= cycle("even", "odd") %> " >
         <td><%= link_to guest.name, guest_path(guest) %></td>
         <td><%= guest.has_form %></td>
-        <td><%= guest.student_id %></td>
-        <td><%= link_to image_tag("delete.png"), {:action => 'delete', :id => guest.id} %></td>
+        <td><%= Student.find_by_id(guest.student_id).name %></td>
+        <td><%= link_to image_tag("delete.png"), guest, :confirm => 'Are you sure?',
+                                                        :method => :delete %></td>
       </tr>
   
     <% end %>

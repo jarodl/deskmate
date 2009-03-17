@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090315050600) do
+ActiveRecord::Schema.define(:version => 20090317052324) do
 
   create_table "guests", :force => true do |t|
     t.string   "name"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(:version => 20090315050600) do
     t.string   "student_id"
     t.string   "room"
     t.string   "phone"
-    t.integer  "num_of_guests", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

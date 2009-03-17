@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :students, :has_many => :guests
   
-  map.resources :guests
+  map.resources :guests, :belongs_to => :students
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
