@@ -6,12 +6,14 @@
   <tr>
     <th>Student</th>
     <th>Overnight</th>
+    <th>Signed in</th>
   </tr>
   
   <tr>
     <% @student = Student.find_by_id(@guest.student_id) %>
     <td><%= link_to @student.name, student_path(@student.id) %></td>
     <td><%= @guest.has_form %></td>
+    <td><%= @guest.created_at.strftime("%B %d at %I:%M %p") %></td>
   </tr>
     
 </table>
