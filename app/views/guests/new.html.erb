@@ -12,12 +12,12 @@
     <%= f.label :student_name %>
     <%= text_field_with_auto_complete :guest, :student_name, { :size => 30 }, 
     { :url => formatted_students_path(:js), 
-      :method => :get, :with => "'search=' + element.value"} %>
+      :method => :get, :with => "'search=' + element.value", :skip_style => true} %>
   </p>
   
   <p>
     <%= f.label :has_form %><br />
-    <%= select( "guest", "has_form", {"Yes" => "true", "No" => "false"} ) %>
+    <%= f.select :has_form, [["Yes", true], ["No", false]] %>
   </p>
   
   <p>

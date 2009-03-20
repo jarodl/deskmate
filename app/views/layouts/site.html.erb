@@ -11,12 +11,16 @@
 <body>
 
 <div class="wrapper">
+
+  <% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+  <% end %>
   
   <h1>Desk Pro</h1>
   
   <hr />
   <%= yield :layout %>
-  
+
 </div>
 
 </body>

@@ -7,10 +7,9 @@
   <h1>Listing students</h1>
 
   <table>
-    <tr>
+    <tr id="header">
       <th>Name</th>
       <th>800 #</th>
-      <th>Guests</th>
       <th>Room #</th>
       <th>Phone #</th>
     </tr>
@@ -19,16 +18,21 @@
     <tr class = " <%= cycle("even", "odd") %> " >
       <td><%= link_to student.name, student_path(student) %></td>
       <td><%= student.student_id %></td>
-      <td><%= student.guests.count %></td>
       <td><%= student.room %></td>
       <td><%= student.phone %></td>
-    </tr>
-  <% end %>
 
+
+
+    </tr>
+    
+  <% end %>
+  
   </table>
 
   <br />
 
   <%= link_to '<input type="submit" value="Add Student" />', new_student_path %>
-
+  
+  <%= will_paginate @students %>
+  
 <% end %>

@@ -11,6 +11,13 @@
 <div class="wrapper">
   
   <h1><%= link_to 'Desk Pro', '/' %></h1>
+  
+  <% form_tag students_path, :method => :get do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil  %>
+    </p>
+  <% end %>
 
   <hr />
   <%= yield :layout %>

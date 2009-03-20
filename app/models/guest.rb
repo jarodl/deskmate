@@ -2,6 +2,12 @@ class Guest < ActiveRecord::Base
   belongs_to :students
   # . . .
   
+  def self.search(search, page)
+    paginate  :per_page => 10, :page => page,
+              :conditions => ['name LIKE ?', "%#{search}%"],
+              :order => 'name'
+  end
+  
   def student_name
     students.name if students
   end

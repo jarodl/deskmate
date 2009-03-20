@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
     
   def index
-    @students = Student.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+    @students = Student.search(params[:search], params[:page])
     
     respond_to do |format|
       format.html # index.html.erb
@@ -9,9 +9,17 @@ class StudentsController < ApplicationController
     end
   end
   
+  def search
+    @results = Student.find(:all, :conditions => ['room LIKE ?', "%#{params[:search]}%"])
+  end
+  
   def show
     @student = Student.find(params[:id])
     @guests = Guest.find_by_student_id(@student.id)
+  rescue ActiveRecord::RecordNotFound
+    logger.error("Attempt to access invalid student #{params[:id]}")
+    flash[:notice] = "Invalid student"
+    redirect_to :action => 'index'
   end
   
   def new
@@ -43,6 +51,9 @@ class StudentsController < ApplicationController
   
   def destroy
     Student.find(params[:id]).destroy
-    redirect_to :action => 'list'
+  rescue ActiveRecord::RecordNotFound
+    logger.error("Attempt to delete invalid student #{params[:id]}")
+    flash[:notice] = "Invalid student"
+    redirect_to :action => 'index'
   end
 end

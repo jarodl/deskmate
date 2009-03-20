@@ -1,11 +1,15 @@
 class GuestsController < ApplicationController
       
   def index
-    @guests = Guest.find(:all)
+    @guests = Guest.search(params[:search], params[:page])
   end
   
   def show
     @guest = Guest.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    logger.error("Attempt to access invalid guest #{params[:id]}")
+    flash[:notice] = "Invalid guest"
+    redirect_to :action => 'index'
   end
   
   def new
@@ -37,6 +41,10 @@ class GuestsController < ApplicationController
   def destroy
     @guest = Guest.find(params[:id])
     @guest.destroy
+    redirect_to :action => 'index'
+  rescue ActiveRecord::RecordNotFound
+    logger.error("Attempt to delete invalid guest #{params[:id]}")
+    flash[:notice] = "Invalid guest"
     redirect_to :action => 'index'
   end
   
