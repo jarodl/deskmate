@@ -14,10 +14,25 @@ class AdminController < ApplicationController
   end
   
   def logout
+    session[:user_id] = :logged_out
+    flash[:notice] = "Logged out"
+    redirect_to(:action => 'login')
   end
   
   def index
     @total_guests = Guest.count
+  end
+  
+  def list_students
+    @students = Student.paginate :per_page => 10, :page => params[:page],
+                      :conditions => ['name LIKE ? OR student_id LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%"],
+                      :order => 'name'
+  end
+  
+  def list_guests
+    @guests = Guest.paginate :per_page => 10, :page => params[:page],
+                             :conditions => ['name LIKE ?', "%#{params[:search]}%"],
+                             :order => 'name'
   end
 
 end

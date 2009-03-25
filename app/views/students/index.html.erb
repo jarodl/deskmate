@@ -4,10 +4,8 @@
   
 <% else %>
 
-  <h1>Listing students</h1>
-
   <table>
-    <tr id="header">
+    <tr id="header" class="odd">
       <th>Name</th>
       <th>800 #</th>
       <th>Room #</th>
@@ -21,8 +19,6 @@
       <td><%= student.room %></td>
       <td><%= student.phone %></td>
 
-
-
     </tr>
     
   <% end %>
@@ -30,8 +26,6 @@
   </table>
 
   <br />
-
-  <%= link_to '<input type="submit" value="Add Student" />', new_student_path %>
   
   <%= will_paginate @students %>
   

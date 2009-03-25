@@ -50,7 +50,9 @@ class StudentsController < ApplicationController
   end
   
   def destroy
-    Student.find(params[:id]).destroy
+    @student = Student.find(params[:id])
+    @student.destroy
+    redirect_to :action => 'index'
   rescue ActiveRecord::RecordNotFound
     logger.error("Attempt to delete invalid student #{params[:id]}")
     flash[:notice] = "Invalid student"

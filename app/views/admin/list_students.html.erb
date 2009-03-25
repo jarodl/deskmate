@@ -1,0 +1,25 @@
+<h1>Listing students</h1>
+
+<table>
+  <tr id="header" class="odd">
+    <th>Name</th>
+    <th>800 #</th>
+    <th>Room #</th>
+    <th>Phone #</th>
+  </tr>
+
+<% for student in @students %>
+  <tr class = " <%= cycle("even", "odd") %> " >
+    <td><%= link_to student.name, edit_student_path(student) %></td>
+    <td><%= student.student_id %></td>
+    <td><%= student.room %></td>
+    <td><%= link_to image_tag("delete.png"), student, :confirm => 'Are you sure?',
+                                                    :method => :delete %></td>
+
+
+
+  </tr>
+  
+<% end %>
+
+</table>

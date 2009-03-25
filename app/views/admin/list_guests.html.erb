@@ -1,0 +1,23 @@
+  <h1>Listing guests</h1>
+
+  <table>
+    <tr id="header" class="odd">
+      <th>Name</th>
+      <th>Form</th>
+      <th>Student</th>
+      <th></th>
+    </tr>
+  
+    <% for guest in @guests %>
+
+      <tr class = " <%= cycle("even", "odd") %> " >
+        <td><%= link_to guest.name, guest_path(guest) %></td>
+        <td><%= guest.has_form %></td>
+        <td><%= Student.find_by_id(guest.student_id).name %></td>
+        <td><%= link_to image_tag("delete.png"), guest, :confirm => 'Are you sure?',
+                                                        :method => :delete %></td>
+      </tr>
+  
+    <% end %>
+
+  </table>

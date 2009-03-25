@@ -20,4 +20,4 @@
 <br />
 
 <%= link_to 'Edit', edit_guest_path(@guest) %> |
-<%= link_to 'View All', guests_path %>
+<%= link_to 'Back', request.env["HTTP_REFERER"] %>

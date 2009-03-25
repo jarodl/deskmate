@@ -1,4 +1,10 @@
-<h1>Welcome</h1>
+<h2>Welcome</h2>
 
-<p>It's <%= Time.now %>.
-We have <%= pluralize(@total_guests, "guest") %>.</p>
+<p>
+  It's <%= Time.now.strftime("%I:%M%p on %m/%d/%Y") %>.
+  We have <%= pluralize(@total_guests, "guest") %>.
+</p>
+
+<%= link_to '<input type="submit" value="Add Student" />', new_student_path %><br />
+
+</table>

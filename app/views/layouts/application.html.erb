@@ -1,20 +1,100 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-  <title>Desk Pro</title>
-  <%= stylesheet_link_tag "layout", :media => "all" %>
-  <%= javascript_include_tag :defaults %>
+	
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	
+	<title>DeskMate</title>
+	
+  <%= stylesheet_link_tag "main", :media => "all" %>
+  
 </head>
+
 <body>
 
 <div class="wrapper">
-  
-  <h1><%= link_to 'Desk Pro', '/' %></h1>
-
-  <hr />
-  <%= yield :layout %>
-  
+	
+	<div id="header">
+		
+		<div id="logo">
+			
+			<%= link_to '<h1>DeskMate</h1>', '/' %>
+			
+		</div>
+		
+		<div id="top-menu">
+			
+			<ul>
+				<%= link_to '<li>Log out</li>', {:controller => 'admin',  :action => 'logout'},
+                                				 :confirm => 'Are you sure you want to logout?' %>
+				<a href=""><li>Help</li></a>
+				<a href=""><li>About</li></a>
+			</ul>
+			
+		</div>
+		
+	</div>
+	
+	<div id="main">
+		
+		<div id="content">
+		
+			<%= yield :layout %>		  
+		
+		</div>
+		
+		<div id="sidebar">
+			
+			<div id="search">
+				
+  				<% form_tag get_path(@controller.controller_name), :method => :get do %>
+				  
+            <legend><span>Find <%= get_name(@controller.controller_name) %></span></legend>
+            
+            <fieldset class="search">
+    				
+              <%= text_field_tag :search, params[:search] %>
+              <%= submit_tag "", :name => nil  %>
+            
+            </fieldset>
+            
+        <% end %>
+        				
+			</div>
+			
+			
+			
+			<div id="menu">
+				
+				<ul>
+					<%= link_to '<li>Students</li>', students_path %>
+					<%= link_to '<li>Guests</li>', guests_path %>
+					<a href=""><li>Account</li></a>
+					<a href=""><li>Desk Log</li></a>
+				</ul>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div id="footer">
+		
+		<ul>
+			<li>Created by Jarod Luebbert</li>
+			<a href=""><li>Help</li></a>
+			<a href=""><li>About</li></a>
+			<a href=""><li>New</li></a>
+			<a href=""><li>Policies</li></a>
+			<a href=""><li>Contact</li></a>
+		</ul>
+		
+	</div>
+	
 </div>
 
 </body>

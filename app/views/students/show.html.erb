@@ -21,12 +21,16 @@
   
     <tr>
       <th><b>Guests:</b></th>
+      <th></th>
+      <th></th>
     </tr>
   
     <% for guest in @guests %>
     
       <tr>
         <td><%= link_to guest.name, guest_path(guest) %></td>
+        <td></td>
+        <td></td>
       </tr>
       
     <% end %>
@@ -36,5 +40,4 @@
 </table>
 <br />
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'View All', students_path %>
+<%= link_to 'Back', request.env["HTTP_REFERER"]  %>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	
+	<title>DeskMate</title>
+	
+  <%= stylesheet_link_tag "main", :media => "all" %>
+  
+</head>
+
+<body>
+
+<div class="wrapper">
+	
+	<div id="header">
+		
+		<div id="logo">
+			
+			<%= link_to '<h1>DeskMate</h1>', '/' %>
+			
+		</div>
+		
+		<div id="top-menu">
+			
+			<ul>
+				<%= link_to '<li>Log out</li>', {:controller => 'admin',  :action => 'logout'},
+                                				 :confirm => 'Are you sure you want to logout?' %>
+				<a href=""><li>Help</li></a>
+				<a href=""><li>About</li></a>
+			</ul>
+			
+		</div>
+		
+	</div>
+	
+	<div id="main">
+		
+    <div id="login">
+		
+			<%= yield :layout %>		  
+		
+    </div>
+	
+	</div>
+	
+	<div id="footer">
+		
+		<ul>
+			<li>Created by Jarod Luebbert</li>
+			<a href=""><li>Help</li></a>
+			<a href=""><li>About</li></a>
+			<a href=""><li>New</li></a>
+			<a href=""><li>Policies</li></a>
+			<a href=""><li>Contact</li></a>
+		</ul>
+		
+	</div>
+	
+</div>
+
+</body>
+</html>

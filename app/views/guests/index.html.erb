@@ -4,14 +4,12 @@
 
 <% else %>
 
-  <h1>Listing guests</h1>
-
   <table>
-    <tr>
+    <tr id="header" class="odd">
       <th>Name</th>
       <th>Form</th>
       <th>Student</th>
-      <th>Delete</th>
+      <th></th>
     </tr>
   
     <% for guest in @guests %>
